@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var segmentedcontrol : UISegmentedControl!
+    
+    @IBOutlet var Map : UISegmentedControl!
+    @IBOutlet weak var Profile: UIView!
+    @IBOutlet var Gallery : UISegmentedControl!
     
     var selectedBtn = 0
 
@@ -17,9 +22,12 @@ class ViewController: UIViewController {
        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    
     }
     
-    
+    @IBAction func segmentchanged (_ sender: AnyObject){
+        
+        }
     
     @IBAction func ChangePage(_ sender: AnyObject) {
         

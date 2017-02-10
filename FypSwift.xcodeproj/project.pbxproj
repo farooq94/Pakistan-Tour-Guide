@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		8B973E661E256CD700D4F3EF /* BtnCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */; };
 		8B973E681E2571D400D4F3EF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B973E671E2571D400D4F3EF /* SecondViewController.swift */; };
+		8BAFF4A91E4E7D2300692E94 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4A81E4E7D2300692E94 /* ProfileViewController.swift */; };
+		8BAFF4AB1E4E7D4000692E94 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4AA1E4E7D4000692E94 /* MapViewController.swift */; };
+		8BAFF4AD1E4E7D5400692E94 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4AC1E4E7D5400692E94 /* GalleryViewController.swift */; };
+		8BAFF4AF1E4E7DAC00692E94 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4AE1E4E7DAC00692E94 /* SignInViewController.swift */; };
+		8BAFF4B11E4E7DBD00692E94 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4B01E4E7DBD00692E94 /* SignUpViewController.swift */; };
+		8BAFF4B31E4E7E5B00692E94 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4B21E4E7E5B00692E94 /* SplashViewController.swift */; };
+		8BAFF4B51E4E7EA900692E94 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4B41E4E7EA900692E94 /* HomeViewController.swift */; };
 		8BD422CF1E2409E8002C040E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD422CE1E2409E8002C040E /* AppDelegate.swift */; };
 		8BD422D11E2409E8002C040E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD422D01E2409E8002C040E /* ViewController.swift */; };
 		8BD422D41E2409E8002C040E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD422D21E2409E8002C040E /* Main.storyboard */; };
@@ -42,6 +49,13 @@
 /* Begin PBXFileReference section */
 		8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnCustomClass.swift; sourceTree = "<group>"; };
 		8B973E671E2571D400D4F3EF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = FypSwiftUITests/SecondViewController.swift; sourceTree = SOURCE_ROOT; };
+		8BAFF4A81E4E7D2300692E94 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8BAFF4AA1E4E7D4000692E94 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8BAFF4AC1E4E7D5400692E94 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		8BAFF4AE1E4E7DAC00692E94 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		8BAFF4B01E4E7DBD00692E94 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8BAFF4B21E4E7E5B00692E94 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		8BAFF4B41E4E7EA900692E94 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8BD422CB1E2409E8002C040E /* FypSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FypSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD422CE1E2409E8002C040E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD422D01E2409E8002C040E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +136,13 @@
 				8BD422FE1E240C29002C040E /* 15697384_592119324307149_6748555852361855231_n.jpg */,
 				8BD422D71E2409E8002C040E /* LaunchScreen.storyboard */,
 				8BD422DA1E2409E8002C040E /* Info.plist */,
+				8BAFF4A81E4E7D2300692E94 /* ProfileViewController.swift */,
+				8BAFF4AA1E4E7D4000692E94 /* MapViewController.swift */,
+				8BAFF4AC1E4E7D5400692E94 /* GalleryViewController.swift */,
+				8BAFF4AE1E4E7DAC00692E94 /* SignInViewController.swift */,
+				8BAFF4B01E4E7DBD00692E94 /* SignUpViewController.swift */,
+				8BAFF4B21E4E7E5B00692E94 /* SplashViewController.swift */,
+				8BAFF4B41E4E7EA900692E94 /* HomeViewController.swift */,
 			);
 			path = FypSwift;
 			sourceTree = "<group>";
@@ -289,9 +310,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B973E661E256CD700D4F3EF /* BtnCustomClass.swift in Sources */,
+				8BAFF4AD1E4E7D5400692E94 /* GalleryViewController.swift in Sources */,
+				8BAFF4AB1E4E7D4000692E94 /* MapViewController.swift in Sources */,
 				8BD423011E240DA6002C040E /* viewTwo.swift in Sources */,
+				8BAFF4AF1E4E7DAC00692E94 /* SignInViewController.swift in Sources */,
+				8BAFF4A91E4E7D2300692E94 /* ProfileViewController.swift in Sources */,
+				8BAFF4B11E4E7DBD00692E94 /* SignUpViewController.swift in Sources */,
+				8BAFF4B51E4E7EA900692E94 /* HomeViewController.swift in Sources */,
 				8BD422D11E2409E8002C040E /* ViewController.swift in Sources */,
 				8BD422CF1E2409E8002C040E /* AppDelegate.swift in Sources */,
+				8BAFF4B31E4E7E5B00692E94 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
