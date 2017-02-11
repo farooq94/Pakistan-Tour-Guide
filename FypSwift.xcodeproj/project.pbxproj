@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		106A8DEC1E4E7FC200E0C622 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DEB1E4E7FC200E0C622 /* GoogleMapsBase.framework */; };
-		106A8DEE1E4E7FCC00E0C622 /* GoogleMapsM4B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DED1E4E7FCC00E0C622 /* GoogleMapsM4B.framework */; };
 		106A8DF11E4E7FDC00E0C622 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DEF1E4E7FDC00E0C622 /* GoogleMaps.framework */; };
 		106A8DF21E4E7FDC00E0C622 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DF01E4E7FDC00E0C622 /* GoogleMapsCore.framework */; };
 		106A8DF41E4E7FF900E0C622 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 106A8DF31E4E7FF900E0C622 /* GoogleMaps.bundle */; };
@@ -64,7 +63,6 @@
 
 /* Begin PBXFileReference section */
 		106A8DEB1E4E7FC200E0C622 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
-		106A8DED1E4E7FCC00E0C622 /* GoogleMapsM4B.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsM4B.framework; sourceTree = "<group>"; };
 		106A8DEF1E4E7FDC00E0C622 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		106A8DF01E4E7FDC00E0C622 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
 		106A8DF31E4E7FF900E0C622 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				106A8DFA1E4E817900E0C622 /* OpenGLES.framework in Frameworks */,
 				106A8DF81E4E817200E0C622 /* QuartzCore.framework in Frameworks */,
 				106A8DF61E4E815700E0C622 /* SystemConfiguration.framework in Frameworks */,
-				106A8DEE1E4E7FCC00E0C622 /* GoogleMapsM4B.framework in Frameworks */,
 				8BD423041E241B67002C040E /* MapKit.framework in Frameworks */,
 				106A8DF21E4E7FDC00E0C622 /* GoogleMapsCore.framework in Frameworks */,
 				106A8DF11E4E7FDC00E0C622 /* GoogleMaps.framework in Frameworks */,
@@ -230,7 +227,6 @@
 				106A8DF31E4E7FF900E0C622 /* GoogleMaps.bundle */,
 				106A8DEF1E4E7FDC00E0C622 /* GoogleMaps.framework */,
 				106A8DF01E4E7FDC00E0C622 /* GoogleMapsCore.framework */,
-				106A8DED1E4E7FCC00E0C622 /* GoogleMapsM4B.framework */,
 				106A8DEB1E4E7FC200E0C622 /* GoogleMapsBase.framework */,
 				8BD423031E241B67002C040E /* MapKit.framework */,
 			);

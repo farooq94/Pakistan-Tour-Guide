@@ -11,6 +11,8 @@ import UIKit
 class BtnCustomClass: UIButton {
     
     
+    @IBOutlet weak var lblHeader: UILabel!
+    
     override func awakeFromNib() {
         self.backgroundColor = UIColor.gray
     }
