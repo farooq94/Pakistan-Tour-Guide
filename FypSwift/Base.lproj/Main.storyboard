@@ -270,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="1748" y="-595"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="5lY-MV-aeh">
             <objects>
-                <viewController id="jjy-L9-TUf" sceneMemberID="viewController">
+                <viewController id="jjy-L9-TUf" customClass="MapViewController" customModule="FypSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g4e-4f-DMh"/>
                         <viewControllerLayoutGuide type="bottom" id="qn5-Cr-upM"/>
