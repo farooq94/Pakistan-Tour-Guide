@@ -359,33 +359,26 @@ class MapViewController: UIViewController ,GMSMapViewDelegate {
     
     
     
-//    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
-//        
-//        
-//        mapView.settings.zoomGestures = false
-//        let marker3 : GMSMarker = GMSMarker.init()
-    
-    
-//        let alert = UIAlertController(title: "Alert", message: "Do you want to add photos/videos?", preferredStyle: UIAlertControllerStyle.alert)
-//        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
-//            action in
-//            
-//            marker3.position = coordinate
-//            marker3.title = "170 Asbury Anderson Rd"
-//            marker3.snippet = "US"
-//            marker3.map = self.mymapView;
-//            marker3.icon = #imageLiteral(resourceName: "Map-Marker-Flag")
-//            
-//            self.performSegue(withIdentifier: "uploading", sender: self)
-//        }))
-//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
-//            print("yaha kuch nahi ayea ga")
-//             // yaha kuch nahi ayea ga
-//            
-//        }))
-//        self.present(alert, animated: true, completion: nil)
+    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
         
-//    }
+
+    
+        let alert = UIAlertController(title: "Alert", message: "Do you want to add photos/videos?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
+            action in
+            
+            
+            
+            self.performSegue(withIdentifier: "uploading", sender: self)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+            print("yaha kuch nahi ayea ga")
+             // yaha kuch nahi ayea ga
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     //zoominout
 //    -(void) mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate{
 //    GMSMarker *marker3 = [[GMSMarker alloc] init];
