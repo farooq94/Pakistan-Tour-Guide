@@ -13,14 +13,14 @@
           "height" : 1
         },
         "cap-insets" : {
-          "bottom" : 16,
-          "top" : 15,
-          "right" : 16,
-          "left" : 15
+          "bottom" : 128,
+          "top" : 127,
+          "right" : 128,
+          "left" : 127
         }
       },
       "idiom" : "universal",
-      "filename" : "map-marker.png",
+      "filename" : "Map-Marker-Flag.png",
       "scale" : "2x"
     },
     {

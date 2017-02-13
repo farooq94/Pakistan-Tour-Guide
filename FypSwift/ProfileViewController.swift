@@ -15,6 +15,7 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBOutlet var profileView: UIView!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
