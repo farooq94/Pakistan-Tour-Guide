@@ -305,8 +305,24 @@ class MapViewController: UIViewController ,GMSMapViewDelegate {
         marker.snippet = customMarker.snippet as String?
         marker.icon = customMarker.image
         
+        
         marker.map = mymapView
     }
+    
+//    - (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
+//    // your code
+//    }
+    
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        
+        marker.icon = #imageLiteral(resourceName: "map-marker")
+        
+        return true;
+        
+    }
+    
+    
     
     
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
