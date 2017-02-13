@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1034585C1E52315E00FDC48C /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1034585B1E52315E00FDC48C /* CustomView.xib */; };
+		1034585E1E52322C00FDC48C /* CustomGMSMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1034585D1E52322C00FDC48C /* CustomGMSMarker.swift */; };
 		106A8DEC1E4E7FC200E0C622 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DEB1E4E7FC200E0C622 /* GoogleMapsBase.framework */; };
 		106A8DF11E4E7FDC00E0C622 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DEF1E4E7FDC00E0C622 /* GoogleMaps.framework */; };
 		106A8DF21E4E7FDC00E0C622 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DF01E4E7FDC00E0C622 /* GoogleMapsCore.framework */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1034585B1E52315E00FDC48C /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		1034585D1E52322C00FDC48C /* CustomGMSMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGMSMarker.swift; sourceTree = "<group>"; };
 		106A8DEB1E4E7FC200E0C622 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
 		106A8DEF1E4E7FDC00E0C622 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		106A8DF01E4E7FDC00E0C622 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				8BD422CE1E2409E8002C040E /* AppDelegate.swift */,
 				8BD422D01E2409E8002C040E /* ViewController.swift */,
 				8BD422D21E2409E8002C040E /* Main.storyboard */,
+				1034585D1E52322C00FDC48C /* CustomGMSMarker.swift */,
 				8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */,
 				8B973E671E2571D400D4F3EF /* SecondViewController.swift */,
 				8BD423001E240DA6002C040E /* viewTwo.swift */,
@@ -187,6 +192,7 @@
 				8BAFF4B01E4E7DBD00692E94 /* SignUpViewController.swift */,
 				8BAFF4B21E4E7E5B00692E94 /* SplashViewController.swift */,
 				8BAFF4B41E4E7EA900692E94 /* HomeViewController.swift */,
+				1034585B1E52315E00FDC48C /* CustomView.xib */,
 			);
 			path = FypSwift;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				8BD422FD1E240C1B002C040E /* Assets.xcassets in Resources */,
 				8BD422D41E2409E8002C040E /* Main.storyboard in Resources */,
 				106A8DF41E4E7FF900E0C622 /* GoogleMaps.bundle in Resources */,
+				1034585C1E52315E00FDC48C /* CustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +380,7 @@
 				8BAFF4AD1E4E7D5400692E94 /* GalleryViewController.swift in Sources */,
 				8BAFF4AB1E4E7D4000692E94 /* MapViewController.swift in Sources */,
 				8BD423011E240DA6002C040E /* viewTwo.swift in Sources */,
+				1034585E1E52322C00FDC48C /* CustomGMSMarker.swift in Sources */,
 				8BAFF4AF1E4E7DAC00692E94 /* SignInViewController.swift in Sources */,
 				8BAFF4A91E4E7D2300692E94 /* ProfileViewController.swift in Sources */,
 				8BAFF4B11E4E7DBD00692E94 /* SignUpViewController.swift in Sources */,
