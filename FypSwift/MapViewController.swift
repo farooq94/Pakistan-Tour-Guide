@@ -22,6 +22,8 @@ class markerCustomClass
     var imageForMarker : UIImage!
     
     
+    
+    
     init(lat:CGFloat,withLong long:CGFloat,withtitle title:NSString,withsnippet snippet:NSString,withMarkerIconImage Iconimage:UIImage , withIMarkermage image:UIImage)
     {
         self.lat = lat
@@ -34,6 +36,10 @@ class markerCustomClass
 }
 
 class MapViewController: UIViewController ,GMSMapViewDelegate {
+    
+    
+    
+    
     
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
@@ -60,8 +66,6 @@ class MapViewController: UIViewController ,GMSMapViewDelegate {
             
         }))
         self.present(alert, animated: true, completion: nil)
-        
-        
         
     }
     
@@ -321,6 +325,14 @@ class MapViewController: UIViewController ,GMSMapViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        
+        
+        
+        
+        
+       
+        
         
         
         for markerCustomObj in arrData {

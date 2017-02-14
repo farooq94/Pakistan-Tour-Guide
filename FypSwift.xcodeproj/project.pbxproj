@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1015BD0F1E538ADE00B8445F /* Bundle+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BD091E538ADE00B8445F /* Bundle+Helper.swift */; };
+		1015BD101E538ADE00B8445F /* ImagePickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BD0A1E538ADE00B8445F /* ImagePickerCollectionViewCell.swift */; };
+		1015BD111E538ADE00B8445F /* OpalImagePickerCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BD0B1E538ADE00B8445F /* OpalImagePickerCollectionViewLayout.swift */; };
+		1015BD121E538ADE00B8445F /* OpalImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BD0C1E538ADE00B8445F /* OpalImagePickerController.swift */; };
+		1015BD131E538ADE00B8445F /* OpalImagePickerRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BD0D1E538ADE00B8445F /* OpalImagePickerRootViewController.swift */; };
+		1015BD141E538ADE00B8445F /* UIViewController+OpalImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BD0E1E538ADE00B8445F /* UIViewController+OpalImagePicker.swift */; };
+		1015BD161E538B3200B8445F /* testExpericeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BD151E538B3200B8445F /* testExpericeViewController.swift */; };
 		1034585C1E52315E00FDC48C /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1034585B1E52315E00FDC48C /* CustomView.xib */; };
 		1034585E1E52322C00FDC48C /* CustomGMSMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1034585D1E52322C00FDC48C /* CustomGMSMarker.swift */; };
 		106A8DEC1E4E7FC200E0C622 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DEB1E4E7FC200E0C622 /* GoogleMapsBase.framework */; };
@@ -64,6 +71,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1015BD091E538ADE00B8445F /* Bundle+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Helper.swift"; sourceTree = "<group>"; };
+		1015BD0A1E538ADE00B8445F /* ImagePickerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		1015BD0B1E538ADE00B8445F /* OpalImagePickerCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpalImagePickerCollectionViewLayout.swift; sourceTree = "<group>"; };
+		1015BD0C1E538ADE00B8445F /* OpalImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpalImagePickerController.swift; sourceTree = "<group>"; };
+		1015BD0D1E538ADE00B8445F /* OpalImagePickerRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpalImagePickerRootViewController.swift; sourceTree = "<group>"; };
+		1015BD0E1E538ADE00B8445F /* UIViewController+OpalImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+OpalImagePicker.swift"; sourceTree = "<group>"; };
+		1015BD151E538B3200B8445F /* testExpericeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testExpericeViewController.swift; sourceTree = "<group>"; };
 		1034585B1E52315E00FDC48C /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		1034585D1E52322C00FDC48C /* CustomGMSMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGMSMarker.swift; sourceTree = "<group>"; };
 		106A8DEB1E4E7FC200E0C622 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
@@ -150,6 +164,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1015BD081E538ADE00B8445F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1015BD091E538ADE00B8445F /* Bundle+Helper.swift */,
+				1015BD0A1E538ADE00B8445F /* ImagePickerCollectionViewCell.swift */,
+				1015BD0B1E538ADE00B8445F /* OpalImagePickerCollectionViewLayout.swift */,
+				1015BD0C1E538ADE00B8445F /* OpalImagePickerController.swift */,
+				1015BD0D1E538ADE00B8445F /* OpalImagePickerRootViewController.swift */,
+				1015BD0E1E538ADE00B8445F /* UIViewController+OpalImagePicker.swift */,
+			);
+			path = Source;
+			sourceTree = SOURCE_ROOT;
+		};
 		8BD422C21E2409E8002C040E = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				8BD422FC1E240C1B002C040E /* Assets.xcassets */,
+				1015BD081E538ADE00B8445F /* Source */,
 				8BD422CE1E2409E8002C040E /* AppDelegate.swift */,
 				8BD422D01E2409E8002C040E /* ViewController.swift */,
 				8BD422D21E2409E8002C040E /* Main.storyboard */,
@@ -189,6 +217,7 @@
 				8BAFF4AA1E4E7D4000692E94 /* MapViewController.swift */,
 				8BAFF4AC1E4E7D5400692E94 /* GalleryViewController.swift */,
 				8BAFF4AE1E4E7DAC00692E94 /* SignInViewController.swift */,
+				1015BD151E538B3200B8445F /* testExpericeViewController.swift */,
 				8BAFF4B01E4E7DBD00692E94 /* SignUpViewController.swift */,
 				8BAFF4B21E4E7E5B00692E94 /* SplashViewController.swift */,
 				8BAFF4B41E4E7EA900692E94 /* HomeViewController.swift */,
@@ -378,13 +407,20 @@
 			files = (
 				8B973E661E256CD700D4F3EF /* BtnCustomClass.swift in Sources */,
 				8BAFF4AD1E4E7D5400692E94 /* GalleryViewController.swift in Sources */,
+				1015BD101E538ADE00B8445F /* ImagePickerCollectionViewCell.swift in Sources */,
 				8BAFF4AB1E4E7D4000692E94 /* MapViewController.swift in Sources */,
+				1015BD111E538ADE00B8445F /* OpalImagePickerCollectionViewLayout.swift in Sources */,
 				8BD423011E240DA6002C040E /* viewTwo.swift in Sources */,
 				1034585E1E52322C00FDC48C /* CustomGMSMarker.swift in Sources */,
 				8BAFF4AF1E4E7DAC00692E94 /* SignInViewController.swift in Sources */,
 				8BAFF4A91E4E7D2300692E94 /* ProfileViewController.swift in Sources */,
+				1015BD161E538B3200B8445F /* testExpericeViewController.swift in Sources */,
 				8BAFF4B11E4E7DBD00692E94 /* SignUpViewController.swift in Sources */,
 				8BAFF4B51E4E7EA900692E94 /* HomeViewController.swift in Sources */,
+				1015BD121E538ADE00B8445F /* OpalImagePickerController.swift in Sources */,
+				1015BD141E538ADE00B8445F /* UIViewController+OpalImagePicker.swift in Sources */,
+				1015BD0F1E538ADE00B8445F /* Bundle+Helper.swift in Sources */,
+				1015BD131E538ADE00B8445F /* OpalImagePickerRootViewController.swift in Sources */,
 				8BD422D11E2409E8002C040E /* ViewController.swift in Sources */,
 				8BD422CF1E2409E8002C040E /* AppDelegate.swift in Sources */,
 				8BAFF4B31E4E7E5B00692E94 /* SplashViewController.swift in Sources */,
