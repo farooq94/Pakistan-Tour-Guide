@@ -16,7 +16,7 @@ class BaseClassViewController: UIViewController {
         super.viewDidLoad()
         
         bgImage.frame = self.view.frame
-        bgImage.image = #imageLiteral(resourceName: "f1")
+        bgImage.image = #imageLiteral(resourceName: "bg (14)")
         self.view.insertSubview(bgImage, at: 0)
     
 

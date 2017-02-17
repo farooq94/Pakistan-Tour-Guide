@@ -53,12 +53,26 @@
 		8BD422CF1E2409E8002C040E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD422CE1E2409E8002C040E /* AppDelegate.swift */; };
 		8BD422D11E2409E8002C040E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD422D01E2409E8002C040E /* ViewController.swift */; };
 		8BD422D41E2409E8002C040E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD422D21E2409E8002C040E /* Main.storyboard */; };
-		8BD422D61E2409E8002C040E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD422D51E2409E8002C040E /* Assets.xcassets */; };
 		8BD422D91E2409E8002C040E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD422D71E2409E8002C040E /* LaunchScreen.storyboard */; };
 		8BD422E41E2409E8002C040E /* FypSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD422E31E2409E8002C040E /* FypSwiftTests.swift */; };
 		8BD422EF1E2409E8002C040E /* FypSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD422EE1E2409E8002C040E /* FypSwiftUITests.swift */; };
-		8BD422FD1E240C1B002C040E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD422FC1E240C1B002C040E /* Assets.xcassets */; };
 		8BD423041E241B67002C040E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD423031E241B67002C040E /* MapKit.framework */; };
+		8BFB13421E57653A00F41871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB13411E57653A00F41871 /* Assets.xcassets */; };
+		8BFB13521E57657E00F41871 /* Chitral.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB13431E57657E00F41871 /* Chitral.jpg */; };
+		8BFB13531E57657E00F41871 /* gulmitvalley.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB13441E57657E00F41871 /* gulmitvalley.jpg */; };
+		8BFB13541E57657E00F41871 /* Hingol Nationsl Park.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB13451E57657E00F41871 /* Hingol Nationsl Park.jpg */; };
+		8BFB13551E57657E00F41871 /* hunzatun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB13461E57657E00F41871 /* hunzatun.jpg */; };
+		8BFB13561E57657E00F41871 /* Islamabad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB13471E57657E00F41871 /* Islamabad.jpg */; };
+		8BFB13571E57657E00F41871 /* Karomber Lake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB13481E57657E00F41871 /* Karomber Lake.jpg */; };
+		8BFB13581E57657E00F41871 /* Neelum Point.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB13491E57657E00F41871 /* Neelum Point.jpg */; };
+		8BFB13591E57657E00F41871 /* Phandar Lake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB134A1E57657E00F41871 /* Phandar Lake.jpg */; };
+		8BFB135A1E57657E00F41871 /* Princess of Hope.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB134B1E57657E00F41871 /* Princess of Hope.jpg */; };
+		8BFB135B1E57657E00F41871 /* Rush-Lake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB134C1E57657E00F41871 /* Rush-Lake.jpg */; };
+		8BFB135C1E57657E00F41871 /* sawat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB134D1E57657E00F41871 /* sawat.jpg */; };
+		8BFB135D1E57657E00F41871 /* siral.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB134E1E57657E00F41871 /* siral.jpg */; };
+		8BFB135E1E57657E00F41871 /* Sost Dry Port.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB134F1E57657E00F41871 /* Sost Dry Port.jpg */; };
+		8BFB135F1E57657E00F41871 /* Taxila.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB13501E57657E00F41871 /* Taxila.jpg */; };
+		8BFB13601E57657E00F41871 /* Tirch Mir.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BFB13511E57657E00F41871 /* Tirch Mir.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +140,6 @@
 		8BD422CE1E2409E8002C040E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD422D01E2409E8002C040E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8BD422D31E2409E8002C040E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8BD422D51E2409E8002C040E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD422D81E2409E8002C040E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BD422DA1E2409E8002C040E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD422DF1E2409E8002C040E /* FypSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FypSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,8 +148,23 @@
 		8BD422EA1E2409E8002C040E /* FypSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FypSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD422EE1E2409E8002C040E /* FypSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FypSwiftUITests.swift; sourceTree = "<group>"; };
 		8BD422F01E2409E8002C040E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BD422FC1E240C1B002C040E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD423031E241B67002C040E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8BFB13411E57653A00F41871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BFB13431E57657E00F41871 /* Chitral.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Chitral.jpg; path = Assets.xcassets/Chitral.jpg; sourceTree = "<group>"; };
+		8BFB13441E57657E00F41871 /* gulmitvalley.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = gulmitvalley.jpg; path = Assets.xcassets/gulmitvalley.jpg; sourceTree = "<group>"; };
+		8BFB13451E57657E00F41871 /* Hingol Nationsl Park.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Hingol Nationsl Park.jpg"; path = "Assets.xcassets/Hingol Nationsl Park.jpg"; sourceTree = "<group>"; };
+		8BFB13461E57657E00F41871 /* hunzatun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hunzatun.jpg; path = Assets.xcassets/hunzatun.jpg; sourceTree = "<group>"; };
+		8BFB13471E57657E00F41871 /* Islamabad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Islamabad.jpg; path = Assets.xcassets/Islamabad.jpg; sourceTree = "<group>"; };
+		8BFB13481E57657E00F41871 /* Karomber Lake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Karomber Lake.jpg"; path = "Assets.xcassets/Karomber Lake.jpg"; sourceTree = "<group>"; };
+		8BFB13491E57657E00F41871 /* Neelum Point.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Neelum Point.jpg"; path = "Assets.xcassets/Neelum Point.jpg"; sourceTree = "<group>"; };
+		8BFB134A1E57657E00F41871 /* Phandar Lake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Phandar Lake.jpg"; path = "Assets.xcassets/Phandar Lake.jpg"; sourceTree = "<group>"; };
+		8BFB134B1E57657E00F41871 /* Princess of Hope.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Princess of Hope.jpg"; path = "Assets.xcassets/Princess of Hope.jpg"; sourceTree = "<group>"; };
+		8BFB134C1E57657E00F41871 /* Rush-Lake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Rush-Lake.jpg"; path = "Assets.xcassets/Rush-Lake.jpg"; sourceTree = "<group>"; };
+		8BFB134D1E57657E00F41871 /* sawat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sawat.jpg; path = Assets.xcassets/sawat.jpg; sourceTree = "<group>"; };
+		8BFB134E1E57657E00F41871 /* siral.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = siral.jpg; path = Assets.xcassets/siral.jpg; sourceTree = "<group>"; };
+		8BFB134F1E57657E00F41871 /* Sost Dry Port.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Sost Dry Port.jpg"; path = "Assets.xcassets/Sost Dry Port.jpg"; sourceTree = "<group>"; };
+		8BFB13501E57657E00F41871 /* Taxila.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Taxila.jpg; path = Assets.xcassets/Taxila.jpg; sourceTree = "<group>"; };
+		8BFB13511E57657E00F41871 /* Tirch Mir.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Tirch Mir.jpg"; path = "Assets.xcassets/Tirch Mir.jpg"; sourceTree = "<group>"; };
 		8F2630E6D117696350CE97D2 /* Pods-FypSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FypSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FypSwift/Pods-FypSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		DD8A298E38C5852122E2D06B /* Pods-FypSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FypSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-FypSwift/Pods-FypSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,7 +264,22 @@
 				8BCCF0C11E56A08F00776425 /* galleryCollectionViewCell.swift */,
 				8BCCF0C21E56A08F00776425 /* secondViewController.swift */,
 				8BCCF0C31E56A08F00776425 /* thirdViewController.swift */,
-				8BD422FC1E240C1B002C040E /* Assets.xcassets */,
+				8BFB13411E57653A00F41871 /* Assets.xcassets */,
+				8BFB13431E57657E00F41871 /* Chitral.jpg */,
+				8BFB13441E57657E00F41871 /* gulmitvalley.jpg */,
+				8BFB13451E57657E00F41871 /* Hingol Nationsl Park.jpg */,
+				8BFB13461E57657E00F41871 /* hunzatun.jpg */,
+				8BFB13471E57657E00F41871 /* Islamabad.jpg */,
+				8BFB13481E57657E00F41871 /* Karomber Lake.jpg */,
+				8BFB13491E57657E00F41871 /* Neelum Point.jpg */,
+				8BFB134A1E57657E00F41871 /* Phandar Lake.jpg */,
+				8BFB134B1E57657E00F41871 /* Princess of Hope.jpg */,
+				8BFB134C1E57657E00F41871 /* Rush-Lake.jpg */,
+				8BFB134D1E57657E00F41871 /* sawat.jpg */,
+				8BFB134E1E57657E00F41871 /* siral.jpg */,
+				8BFB134F1E57657E00F41871 /* Sost Dry Port.jpg */,
+				8BFB13501E57657E00F41871 /* Taxila.jpg */,
+				8BFB13511E57657E00F41871 /* Tirch Mir.jpg */,
 				1015BD081E538ADE00B8445F /* Source */,
 				8BD422CE1E2409E8002C040E /* AppDelegate.swift */,
 				8BD422D01E2409E8002C040E /* ViewController.swift */,
@@ -244,7 +287,6 @@
 				1034585D1E52322C00FDC48C /* CustomGMSMarker.swift */,
 				8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */,
 				8B973E671E2571D400D4F3EF /* SecondViewController.swift */,
-				8BD422D51E2409E8002C040E /* Assets.xcassets */,
 				8BCCF0BD1E569F8600776425 /* ZeeViewController.swift */,
 				8BD422D71E2409E8002C040E /* LaunchScreen.storyboard */,
 				8BD422DA1E2409E8002C040E /* Info.plist */,
@@ -415,12 +457,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BFB135D1E57657E00F41871 /* siral.jpg in Resources */,
 				8BD422D91E2409E8002C040E /* LaunchScreen.storyboard in Resources */,
-				8BD422D61E2409E8002C040E /* Assets.xcassets in Resources */,
-				8BD422FD1E240C1B002C040E /* Assets.xcassets in Resources */,
+				8BFB13591E57657E00F41871 /* Phandar Lake.jpg in Resources */,
+				8BFB13521E57657E00F41871 /* Chitral.jpg in Resources */,
 				8BD422D41E2409E8002C040E /* Main.storyboard in Resources */,
+				8BFB135E1E57657E00F41871 /* Sost Dry Port.jpg in Resources */,
+				8BFB135B1E57657E00F41871 /* Rush-Lake.jpg in Resources */,
 				106A8DF41E4E7FF900E0C622 /* GoogleMaps.bundle in Resources */,
+				8BFB13531E57657E00F41871 /* gulmitvalley.jpg in Resources */,
+				8BFB13421E57653A00F41871 /* Assets.xcassets in Resources */,
+				8BFB13601E57657E00F41871 /* Tirch Mir.jpg in Resources */,
+				8BFB135F1E57657E00F41871 /* Taxila.jpg in Resources */,
+				8BFB135C1E57657E00F41871 /* sawat.jpg in Resources */,
+				8BFB13571E57657E00F41871 /* Karomber Lake.jpg in Resources */,
+				8BFB13581E57657E00F41871 /* Neelum Point.jpg in Resources */,
+				8BFB13541E57657E00F41871 /* Hingol Nationsl Park.jpg in Resources */,
+				8BFB13551E57657E00F41871 /* hunzatun.jpg in Resources */,
+				8BFB13561E57657E00F41871 /* Islamabad.jpg in Resources */,
 				1034585C1E52315E00FDC48C /* CustomView.xib in Resources */,
+				8BFB135A1E57657E00F41871 /* Princess of Hope.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
