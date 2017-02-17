@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseClassViewController {
     
     @IBOutlet var SegmentedControl: UIView!
 

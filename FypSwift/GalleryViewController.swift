@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GalleryViewController: UIViewController {
+class GalleryViewController: BaseClassViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class budgetingViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class budgetingViewController: BaseClassViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var bgtableview: UITableView!
     @IBOutlet weak var bgbtn: UIButton!

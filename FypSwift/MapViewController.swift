@@ -35,7 +35,7 @@ class markerCustomClass
     }
 }
 
-class MapViewController: UIViewController ,GMSMapViewDelegate {
+class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
     
     
     

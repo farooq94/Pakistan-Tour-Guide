@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZeeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ZeeViewController: BaseClassViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var mycollectionview: UICollectionView!
     
@@ -20,9 +20,7 @@ class ZeeViewController: UIViewController, UICollectionViewDelegate, UICollectio
         
     }
     var ceoArray: [ceoObject] = []
-    
 
-    
     //var arrCities = [Any]()
     var selectedCityID : Int = 0
     
@@ -42,6 +40,9 @@ class ZeeViewController: UIViewController, UICollectionViewDelegate, UICollectio
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+
 
         ceoArray.append(ceoObject(vcbtn:"SINDH", myimageview: UIImage(named: "sindh1")!) )
         ceoArray.append(ceoObject(vcbtn:"PUNJAB", myimageview: UIImage(named: "punjab")!) )

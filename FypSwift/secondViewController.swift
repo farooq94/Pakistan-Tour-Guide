@@ -8,7 +8,9 @@
 
 import UIKit
 
-class secondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class secondViewController: BaseClassViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
     
     @IBOutlet weak var lblTitle: UILabel!
     struct ceoObject {
@@ -31,6 +33,7 @@ class secondViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var collectionview: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
         if CityTitle == "" {

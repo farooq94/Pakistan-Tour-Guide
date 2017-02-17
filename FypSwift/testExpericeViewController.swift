@@ -8,7 +8,7 @@
 
 import UIKit
 
-class testExpericeViewController: UIViewController,OpalImagePickerControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UITextViewDelegate {
+class testExpericeViewController: BaseClassViewController,OpalImagePickerControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UITextViewDelegate {
     @IBOutlet weak var MyCollectionView: UICollectionView!
     @IBOutlet weak var text_view: UITextView!
     @IBOutlet weak var UploadBtn: UIButton!

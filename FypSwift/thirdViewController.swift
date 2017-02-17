@@ -8,7 +8,7 @@
 
 import UIKit
 
-class thirdViewController: UIViewController {
+class thirdViewController: BaseClassViewController {
    
     @IBOutlet weak var hotels: UITextView!
    

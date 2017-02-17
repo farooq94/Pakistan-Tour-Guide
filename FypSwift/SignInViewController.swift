@@ -8,10 +8,12 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: BaseClassViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+   
 
         // Do any additional setup after loading the view.
     }

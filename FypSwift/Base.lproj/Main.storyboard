@@ -847,7 +847,7 @@
                                         <rect key="frame" x="0.0" y="28" width="292" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IHt-J9-4YY" id="JKQ-KE-7xS">
-                                            <rect key="frame" x="0.0" y="0.0" width="292" height="45.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="292" height="46"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.65086507800000004" green="0.44940519330000001" blue="0.092072136700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -892,10 +892,10 @@
         <image name="15697384_592119324307149_6748555852361855231_n.jpg" width="959" height="960"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PA1-ZI-8u2"/>
-        <segue reference="puq-1F-Cui"/>
+        <segue reference="qrQ-XI-5Dw"/>
+        <segue reference="LRF-hi-76s"/>
         <segue reference="KMQ-Da-hTC"/>
-        <segue reference="rOj-zP-Tnd"/>
         <segue reference="4x1-wC-tpO"/>
+        <segue reference="PA1-ZI-8u2"/>
     </inferredMetricsTieBreakers>
 </document>

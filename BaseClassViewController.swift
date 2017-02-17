@@ -1,28 +1,26 @@
 //
-//  SecondViewController.swift
+//  BaseClassViewController.swift
 //  FypSwift
 //
-//  Created by Nano Degree on 11/01/2017.
+//  Created by MBP on 17/02/2017.
 //  Copyright © 2017 Nano Degree. All rights reserved.
 //
 
 import UIKit
 
+class BaseClassViewController: UIViewController {
 
-class SecondViewController: UIViewController {
-
+    let bgImage : UIImageView! = UIImageView.init()
     
-     let bgImage : UIImageView! = UIImageView.init()
-    
-    @IBOutlet weak var lblHeader: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         bgImage.frame = self.view.frame
         bgImage.image = #imageLiteral(resourceName: "f1")
         self.view.insertSubview(bgImage, at: 0)
+    
 
-        // Do any additional     setup after loading the view.
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

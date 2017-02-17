@@ -32,6 +32,7 @@
 		106A8E081E4E82E200E0C622 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8E071E4E82E200E0C622 /* Accelerate.framework */; };
 		106A8E0A1E4E82F200E0C622 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8E091E4E82F200E0C622 /* CoreGraphics.framework */; };
 		106A8E0C1E4E82FB00E0C622 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8E0B1E4E82FB00E0C622 /* CoreData.framework */; };
+		10BB372C1E5730AB005AABF4 /* BaseClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB372B1E5730AB005AABF4 /* BaseClassViewController.swift */; };
 		2AF8DDECDA37C7D5D9785544 /* libPods-FypSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 122E8F37A32056D0A9860093 /* libPods-FypSwift.a */; };
 		8B973E661E256CD700D4F3EF /* BtnCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */; };
 		8B973E681E2571D400D4F3EF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B973E671E2571D400D4F3EF /* SecondViewController.swift */; };
@@ -57,7 +58,6 @@
 		8BD422E41E2409E8002C040E /* FypSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD422E31E2409E8002C040E /* FypSwiftTests.swift */; };
 		8BD422EF1E2409E8002C040E /* FypSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD422EE1E2409E8002C040E /* FypSwiftUITests.swift */; };
 		8BD422FD1E240C1B002C040E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD422FC1E240C1B002C040E /* Assets.xcassets */; };
-		8BD423011E240DA6002C040E /* viewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD423001E240DA6002C040E /* viewTwo.swift */; };
 		8BD423041E241B67002C040E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD423031E241B67002C040E /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +104,7 @@
 		106A8E071E4E82E200E0C622 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		106A8E091E4E82F200E0C622 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		106A8E0B1E4E82FB00E0C622 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		10BB372B1E5730AB005AABF4 /* BaseClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseClassViewController.swift; path = ../BaseClassViewController.swift; sourceTree = "<group>"; };
 		122E8F37A32056D0A9860093 /* libPods-FypSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FypSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnCustomClass.swift; sourceTree = "<group>"; };
 		8B973E671E2571D400D4F3EF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = FypSwiftUITests/SecondViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -135,7 +136,6 @@
 		8BD422EE1E2409E8002C040E /* FypSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FypSwiftUITests.swift; sourceTree = "<group>"; };
 		8BD422F01E2409E8002C040E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD422FC1E240C1B002C040E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8BD423001E240DA6002C040E /* viewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewTwo.swift; sourceTree = "<group>"; };
 		8BD423031E241B67002C040E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F2630E6D117696350CE97D2 /* Pods-FypSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FypSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FypSwift/Pods-FypSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		DD8A298E38C5852122E2D06B /* Pods-FypSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FypSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-FypSwift/Pods-FypSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +230,7 @@
 		8BD422CD1E2409E8002C040E /* FypSwift */ = {
 			isa = PBXGroup;
 			children = (
+				10BB372B1E5730AB005AABF4 /* BaseClassViewController.swift */,
 				8BCCF0BF1E56A08F00776425 /* budgetingViewController.swift */,
 				8BCCF0C01E56A08F00776425 /* fourthViewController.swift */,
 				8BCCF0C11E56A08F00776425 /* galleryCollectionViewCell.swift */,
@@ -243,7 +244,6 @@
 				1034585D1E52322C00FDC48C /* CustomGMSMarker.swift */,
 				8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */,
 				8B973E671E2571D400D4F3EF /* SecondViewController.swift */,
-				8BD423001E240DA6002C040E /* viewTwo.swift */,
 				8BD422D51E2409E8002C040E /* Assets.xcassets */,
 				8BCCF0BD1E569F8600776425 /* ZeeViewController.swift */,
 				8BD422D71E2409E8002C040E /* LaunchScreen.storyboard */,
@@ -503,7 +503,6 @@
 				8BCCF0C51E56A08F00776425 /* fourthViewController.swift in Sources */,
 				8BAFF4AB1E4E7D4000692E94 /* MapViewController.swift in Sources */,
 				1015BD111E538ADE00B8445F /* OpalImagePickerCollectionViewLayout.swift in Sources */,
-				8BD423011E240DA6002C040E /* viewTwo.swift in Sources */,
 				1034585E1E52322C00FDC48C /* CustomGMSMarker.swift in Sources */,
 				8BAFF4AF1E4E7DAC00692E94 /* SignInViewController.swift in Sources */,
 				8BAFF4A91E4E7D2300692E94 /* ProfileViewController.swift in Sources */,
@@ -516,6 +515,7 @@
 				1015BD0F1E538ADE00B8445F /* Bundle+Helper.swift in Sources */,
 				1015BD131E538ADE00B8445F /* OpalImagePickerRootViewController.swift in Sources */,
 				8BD422D11E2409E8002C040E /* ViewController.swift in Sources */,
+				10BB372C1E5730AB005AABF4 /* BaseClassViewController.swift in Sources */,
 				8BD422CF1E2409E8002C040E /* AppDelegate.swift in Sources */,
 				8BCCF0C41E56A08F00776425 /* budgetingViewController.swift in Sources */,
 				8BAFF4B31E4E7E5B00692E94 /* SplashViewController.swift in Sources */,
