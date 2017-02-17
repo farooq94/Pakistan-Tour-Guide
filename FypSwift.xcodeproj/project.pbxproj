@@ -32,6 +32,7 @@
 		106A8E081E4E82E200E0C622 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8E071E4E82E200E0C622 /* Accelerate.framework */; };
 		106A8E0A1E4E82F200E0C622 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8E091E4E82F200E0C622 /* CoreGraphics.framework */; };
 		106A8E0C1E4E82FB00E0C622 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8E0B1E4E82FB00E0C622 /* CoreData.framework */; };
+		2AF8DDECDA37C7D5D9785544 /* libPods-FypSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 122E8F37A32056D0A9860093 /* libPods-FypSwift.a */; };
 		8B973E661E256CD700D4F3EF /* BtnCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */; };
 		8B973E681E2571D400D4F3EF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B973E671E2571D400D4F3EF /* SecondViewController.swift */; };
 		8BAFF4A91E4E7D2300692E94 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4A81E4E7D2300692E94 /* ProfileViewController.swift */; };
@@ -103,6 +104,7 @@
 		106A8E071E4E82E200E0C622 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		106A8E091E4E82F200E0C622 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		106A8E0B1E4E82FB00E0C622 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		122E8F37A32056D0A9860093 /* libPods-FypSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FypSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnCustomClass.swift; sourceTree = "<group>"; };
 		8B973E671E2571D400D4F3EF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = FypSwiftUITests/SecondViewController.swift; sourceTree = SOURCE_ROOT; };
 		8BAFF4A81E4E7D2300692E94 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,8 @@
 		8BD422FC1E240C1B002C040E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD423001E240DA6002C040E /* viewTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = viewTwo.swift; sourceTree = "<group>"; };
 		8BD423031E241B67002C040E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8F2630E6D117696350CE97D2 /* Pods-FypSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FypSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FypSwift/Pods-FypSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		DD8A298E38C5852122E2D06B /* Pods-FypSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FypSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-FypSwift/Pods-FypSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 				106A8DF21E4E7FDC00E0C622 /* GoogleMapsCore.framework in Frameworks */,
 				106A8DF11E4E7FDC00E0C622 /* GoogleMaps.framework in Frameworks */,
 				106A8DEC1E4E7FC200E0C622 /* GoogleMapsBase.framework in Frameworks */,
+				2AF8DDECDA37C7D5D9785544 /* libPods-FypSwift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +196,15 @@
 			path = Source;
 			sourceTree = SOURCE_ROOT;
 		};
+		331A6793D4A84AB55B570E00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F2630E6D117696350CE97D2 /* Pods-FypSwift.debug.xcconfig */,
+				DD8A298E38C5852122E2D06B /* Pods-FypSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8BD422C21E2409E8002C040E = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +213,7 @@
 				8BD422ED1E2409E8002C040E /* FypSwiftUITests */,
 				8BD422CC1E2409E8002C040E /* Products */,
 				8BD423021E241B66002C040E /* Frameworks */,
+				331A6793D4A84AB55B570E00 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,6 +300,7 @@
 				106A8DF01E4E7FDC00E0C622 /* GoogleMapsCore.framework */,
 				106A8DEB1E4E7FC200E0C622 /* GoogleMapsBase.framework */,
 				8BD423031E241B67002C040E /* MapKit.framework */,
+				122E8F37A32056D0A9860093 /* libPods-FypSwift.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -296,9 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BD422F31E2409E8002C040E /* Build configuration list for PBXNativeTarget "FypSwift" */;
 			buildPhases = (
+				9E8BFCBA66ADFD0050AB66C7 /* [CP] Check Pods Manifest.lock */,
 				8BD422C71E2409E8002C040E /* Sources */,
 				8BD422C81E2409E8002C040E /* Frameworks */,
 				8BD422C91E2409E8002C040E /* Resources */,
+				52FEB63D6D89B20519C40C98 /* [CP] Embed Pods Frameworks */,
+				80D1271FFED186D0CCD13794 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -420,6 +439,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52FEB63D6D89B20519C40C98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FypSwift/Pods-FypSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80D1271FFED186D0CCD13794 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FypSwift/Pods-FypSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E8BFCBA66ADFD0050AB66C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8BD422C71E2409E8002C040E /* Sources */ = {
@@ -602,6 +669,7 @@
 		};
 		8BD422F41E2409E8002C040E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F2630E6D117696350CE97D2 /* Pods-FypSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -619,6 +687,7 @@
 		};
 		8BD422F51E2409E8002C040E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD8A298E38C5852122E2D06B /* Pods-FypSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
