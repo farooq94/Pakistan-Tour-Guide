@@ -41,6 +41,13 @@
 		8BAFF4B11E4E7DBD00692E94 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4B01E4E7DBD00692E94 /* SignUpViewController.swift */; };
 		8BAFF4B31E4E7E5B00692E94 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4B21E4E7E5B00692E94 /* SplashViewController.swift */; };
 		8BAFF4B51E4E7EA900692E94 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4B41E4E7EA900692E94 /* HomeViewController.swift */; };
+		8BCCF0BC1E56703400776425 /* myimagecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCF0BB1E56703400776425 /* myimagecell.swift */; };
+		8BCCF0BE1E569F8600776425 /* ZeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCF0BD1E569F8600776425 /* ZeeViewController.swift */; };
+		8BCCF0C41E56A08F00776425 /* budgetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCF0BF1E56A08F00776425 /* budgetingViewController.swift */; };
+		8BCCF0C51E56A08F00776425 /* fourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCF0C01E56A08F00776425 /* fourthViewController.swift */; };
+		8BCCF0C61E56A08F00776425 /* galleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCF0C11E56A08F00776425 /* galleryCollectionViewCell.swift */; };
+		8BCCF0C71E56A08F00776425 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCF0C21E56A08F00776425 /* secondViewController.swift */; };
+		8BCCF0C81E56A08F00776425 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCCF0C31E56A08F00776425 /* thirdViewController.swift */; };
 		8BD422CF1E2409E8002C040E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD422CE1E2409E8002C040E /* AppDelegate.swift */; };
 		8BD422D11E2409E8002C040E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD422D01E2409E8002C040E /* ViewController.swift */; };
 		8BD422D41E2409E8002C040E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD422D21E2409E8002C040E /* Main.storyboard */; };
@@ -105,6 +112,13 @@
 		8BAFF4B01E4E7DBD00692E94 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8BAFF4B21E4E7E5B00692E94 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		8BAFF4B41E4E7EA900692E94 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8BCCF0BB1E56703400776425 /* myimagecell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myimagecell.swift; sourceTree = "<group>"; };
+		8BCCF0BD1E569F8600776425 /* ZeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZeeViewController.swift; sourceTree = "<group>"; };
+		8BCCF0BF1E56A08F00776425 /* budgetingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = budgetingViewController.swift; sourceTree = "<group>"; };
+		8BCCF0C01E56A08F00776425 /* fourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fourthViewController.swift; sourceTree = "<group>"; };
+		8BCCF0C11E56A08F00776425 /* galleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = galleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BCCF0C21E56A08F00776425 /* secondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
+		8BCCF0C31E56A08F00776425 /* thirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
 		8BD422CB1E2409E8002C040E /* FypSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FypSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD422CE1E2409E8002C040E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD422D01E2409E8002C040E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +215,11 @@
 		8BD422CD1E2409E8002C040E /* FypSwift */ = {
 			isa = PBXGroup;
 			children = (
+				8BCCF0BF1E56A08F00776425 /* budgetingViewController.swift */,
+				8BCCF0C01E56A08F00776425 /* fourthViewController.swift */,
+				8BCCF0C11E56A08F00776425 /* galleryCollectionViewCell.swift */,
+				8BCCF0C21E56A08F00776425 /* secondViewController.swift */,
+				8BCCF0C31E56A08F00776425 /* thirdViewController.swift */,
 				8BD422FC1E240C1B002C040E /* Assets.xcassets */,
 				1015BD081E538ADE00B8445F /* Source */,
 				8BD422CE1E2409E8002C040E /* AppDelegate.swift */,
@@ -211,6 +230,7 @@
 				8B973E671E2571D400D4F3EF /* SecondViewController.swift */,
 				8BD423001E240DA6002C040E /* viewTwo.swift */,
 				8BD422D51E2409E8002C040E /* Assets.xcassets */,
+				8BCCF0BD1E569F8600776425 /* ZeeViewController.swift */,
 				8BD422D71E2409E8002C040E /* LaunchScreen.storyboard */,
 				8BD422DA1E2409E8002C040E /* Info.plist */,
 				8BAFF4A81E4E7D2300692E94 /* ProfileViewController.swift */,
@@ -222,6 +242,7 @@
 				8BAFF4B21E4E7E5B00692E94 /* SplashViewController.swift */,
 				8BAFF4B41E4E7EA900692E94 /* HomeViewController.swift */,
 				1034585B1E52315E00FDC48C /* CustomView.xib */,
+				8BCCF0BB1E56703400776425 /* myimagecell.swift */,
 			);
 			path = FypSwift;
 			sourceTree = "<group>";
@@ -406,14 +427,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B973E661E256CD700D4F3EF /* BtnCustomClass.swift in Sources */,
+				8BCCF0C61E56A08F00776425 /* galleryCollectionViewCell.swift in Sources */,
+				8BCCF0BE1E569F8600776425 /* ZeeViewController.swift in Sources */,
+				8BCCF0BC1E56703400776425 /* myimagecell.swift in Sources */,
+				8BCCF0C81E56A08F00776425 /* thirdViewController.swift in Sources */,
 				8BAFF4AD1E4E7D5400692E94 /* GalleryViewController.swift in Sources */,
 				1015BD101E538ADE00B8445F /* ImagePickerCollectionViewCell.swift in Sources */,
+				8BCCF0C51E56A08F00776425 /* fourthViewController.swift in Sources */,
 				8BAFF4AB1E4E7D4000692E94 /* MapViewController.swift in Sources */,
 				1015BD111E538ADE00B8445F /* OpalImagePickerCollectionViewLayout.swift in Sources */,
 				8BD423011E240DA6002C040E /* viewTwo.swift in Sources */,
 				1034585E1E52322C00FDC48C /* CustomGMSMarker.swift in Sources */,
 				8BAFF4AF1E4E7DAC00692E94 /* SignInViewController.swift in Sources */,
 				8BAFF4A91E4E7D2300692E94 /* ProfileViewController.swift in Sources */,
+				8BCCF0C71E56A08F00776425 /* secondViewController.swift in Sources */,
 				1015BD161E538B3200B8445F /* testExpericeViewController.swift in Sources */,
 				8BAFF4B11E4E7DBD00692E94 /* SignUpViewController.swift in Sources */,
 				8BAFF4B51E4E7EA900692E94 /* HomeViewController.swift in Sources */,
@@ -423,6 +450,7 @@
 				1015BD131E538ADE00B8445F /* OpalImagePickerRootViewController.swift in Sources */,
 				8BD422D11E2409E8002C040E /* ViewController.swift in Sources */,
 				8BD422CF1E2409E8002C040E /* AppDelegate.swift in Sources */,
+				8BCCF0C41E56A08F00776425 /* budgetingViewController.swift in Sources */,
 				8BAFF4B31E4E7E5B00692E94 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
