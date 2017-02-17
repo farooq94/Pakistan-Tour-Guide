@@ -19,7 +19,7 @@ class BaseClassViewController: UIViewController {
         bgImage.image = #imageLiteral(resourceName: "bg (14)")
         self.view.insertSubview(bgImage, at: 0)
     
-
+////////////
         // Do any additional setup after loading the view.
     }
 
