@@ -329,29 +329,24 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        
-        
-        
-        
-        
-       
-        
-        
+        var i = 0
         
         for markerCustomObj in arrData {
             
-            self.addMarkerWithCustomMarkerObj(customMarker: markerCustomObj)
+            self.addMarkerWithCustomMarkerObj(customMarker: markerCustomObj, withInt: i)
+            
+            i = i + 1
             
         }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    func addMarkerWithCustomMarkerObj(customMarker : markerCustomClass)
+    
+    func addMarkerWithCustomMarkerObj(customMarker : markerCustomClass, withInt int: Int)
     {
         //  Creates a marker in the center of the map.
         let marker = GMSMarker.init()
@@ -361,10 +356,11 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
         marker.snippet = customMarker.snippet as String?
         marker.icon = customMarker.imageForMarkerIcon
         
-        marker.userData = ["ImageName" : "Mountain-marker2", "Tag" : 0]
-
+        marker.userData = ["ImageName" : customMarker.TapImage, "Tag" : int]
+        
         marker.map = mymapView
     }
+
     
 //    - (void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
 //    // your code
