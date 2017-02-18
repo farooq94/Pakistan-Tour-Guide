@@ -34,8 +34,11 @@
 		106A8E0C1E4E82FB00E0C622 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8E0B1E4E82FB00E0C622 /* CoreData.framework */; };
 		10BB372C1E5730AB005AABF4 /* BaseClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BB372B1E5730AB005AABF4 /* BaseClassViewController.swift */; };
 		2AF8DDECDA37C7D5D9785544 /* libPods-FypSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 122E8F37A32056D0A9860093 /* libPods-FypSwift.a */; };
+		8B561FE61E57E43700ECA8C9 /* ImageViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B561FE51E57E43700ECA8C9 /* ImageViewCustom.swift */; };
+		8B561FE81E57ECF100ECA8C9 /* UserPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B561FE71E57ECF100ECA8C9 /* UserPhotosViewController.swift */; };
 		8B973E661E256CD700D4F3EF /* BtnCustomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */; };
 		8B973E681E2571D400D4F3EF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B973E671E2571D400D4F3EF /* SecondViewController.swift */; };
+		8B9822501E577EAE00F28D84 /* LocationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B98224F1E577EAE00F28D84 /* LocationCollectionViewCell.swift */; };
 		8BAFF4A91E4E7D2300692E94 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4A81E4E7D2300692E94 /* ProfileViewController.swift */; };
 		8BAFF4AB1E4E7D4000692E94 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4AA1E4E7D4000692E94 /* MapViewController.swift */; };
 		8BAFF4AD1E4E7D5400692E94 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAFF4AC1E4E7D5400692E94 /* GalleryViewController.swift */; };
@@ -120,8 +123,11 @@
 		106A8E0B1E4E82FB00E0C622 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		10BB372B1E5730AB005AABF4 /* BaseClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseClassViewController.swift; path = ../BaseClassViewController.swift; sourceTree = "<group>"; };
 		122E8F37A32056D0A9860093 /* libPods-FypSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FypSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B561FE51E57E43700ECA8C9 /* ImageViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewCustom.swift; sourceTree = "<group>"; };
+		8B561FE71E57ECF100ECA8C9 /* UserPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPhotosViewController.swift; sourceTree = "<group>"; };
 		8B973E651E256CD700D4F3EF /* BtnCustomClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnCustomClass.swift; sourceTree = "<group>"; };
 		8B973E671E2571D400D4F3EF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = FypSwiftUITests/SecondViewController.swift; sourceTree = SOURCE_ROOT; };
+		8B98224F1E577EAE00F28D84 /* LocationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BAFF4A81E4E7D2300692E94 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8BAFF4AA1E4E7D4000692E94 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8BAFF4AC1E4E7D5400692E94 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -300,6 +306,9 @@
 				8BAFF4B41E4E7EA900692E94 /* HomeViewController.swift */,
 				1034585B1E52315E00FDC48C /* CustomView.xib */,
 				8BCCF0BB1E56703400776425 /* myimagecell.swift */,
+				8B98224F1E577EAE00F28D84 /* LocationCollectionViewCell.swift */,
+				8B561FE51E57E43700ECA8C9 /* ImageViewCustom.swift */,
+				8B561FE71E57ECF100ECA8C9 /* UserPhotosViewController.swift */,
 			);
 			path = FypSwift;
 			sourceTree = "<group>";
@@ -563,6 +572,7 @@
 				8BAFF4AF1E4E7DAC00692E94 /* SignInViewController.swift in Sources */,
 				8BAFF4A91E4E7D2300692E94 /* ProfileViewController.swift in Sources */,
 				8BCCF0C71E56A08F00776425 /* secondViewController.swift in Sources */,
+				8B561FE81E57ECF100ECA8C9 /* UserPhotosViewController.swift in Sources */,
 				1015BD161E538B3200B8445F /* testExpericeViewController.swift in Sources */,
 				8BAFF4B11E4E7DBD00692E94 /* SignUpViewController.swift in Sources */,
 				8BAFF4B51E4E7EA900692E94 /* HomeViewController.swift in Sources */,
@@ -572,7 +582,9 @@
 				1015BD131E538ADE00B8445F /* OpalImagePickerRootViewController.swift in Sources */,
 				8BD422D11E2409E8002C040E /* ViewController.swift in Sources */,
 				10BB372C1E5730AB005AABF4 /* BaseClassViewController.swift in Sources */,
+				8B9822501E577EAE00F28D84 /* LocationCollectionViewCell.swift in Sources */,
 				8BD422CF1E2409E8002C040E /* AppDelegate.swift in Sources */,
+				8B561FE61E57E43700ECA8C9 /* ImageViewCustom.swift in Sources */,
 				8BCCF0C41E56A08F00776425 /* budgetingViewController.swift in Sources */,
 				8BAFF4B31E4E7E5B00692E94 /* SplashViewController.swift in Sources */,
 			);

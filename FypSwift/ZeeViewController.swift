@@ -48,8 +48,8 @@ class ZeeViewController: BaseClassViewController, UICollectionViewDelegate, UICo
         ceoArray.append(ceoObject(vcbtn:"PUNJAB", myimageview: UIImage(named: "punjab")!) )
         ceoArray.append(ceoObject(vcbtn:"BALOCHISTAN", myimageview: UIImage(named: "balochistan")!) )
         ceoArray.append(ceoObject(vcbtn:"KPK", myimageview: UIImage(named: "khyber pakhtunkhwa")!) )
-        ceoArray.append(ceoObject(vcbtn:"GILGIT/BALTISTAN", myimageview: UIImage(named: "gilgit")!) )
-        ceoArray.append(ceoObject(vcbtn:"KASHMIR", myimageview: UIImage(named: "kashmir2")!) )
+        ceoArray.append(ceoObject(vcbtn:"GILGIT/BALTISTAN", myimageview: UIImage(named: "comboGilgit")!) )
+        ceoArray.append(ceoObject(vcbtn:"KASHMIR", myimageview: UIImage(named: "comboKASHMI")!) )
         
         
         
