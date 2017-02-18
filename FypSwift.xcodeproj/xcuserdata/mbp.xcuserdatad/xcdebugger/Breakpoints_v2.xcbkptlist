@@ -10,69 +10,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FypSwift/testExpericeViewController.swift"
-            timestampString = "508792185.178459"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "testExpericeViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FypSwift.testExpericeViewController.selectedImage.setter : Swift.Array&lt;__ObjC.UIImage&gt;"
-                  moduleName = "FypSwift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mbp/Documents/NewCopy/fyp/FypSwift/testExpericeViewController.swift"
-                  timestampString = "509030433.219241"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "65">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FypSwift.testExpericeViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; FypSwift.testExpericeViewController"
-                  moduleName = "FypSwift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mbp/Documents/NewCopy/fyp/FypSwift/testExpericeViewController.swift"
-                  timestampString = "509030433.222365"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "324">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FypSwift.testExpericeViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;FypSwift.testExpericeViewController&gt;"
-                  moduleName = "FypSwift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mbp/Documents/NewCopy/fyp/FypSwift/testExpericeViewController.swift"
-                  timestampString = "509030433.225615"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "226">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FypSwift/testExpericeViewController.swift"
             timestampString = "508792382.275929"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

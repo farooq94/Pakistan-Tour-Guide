@@ -12,6 +12,10 @@ class HomeViewController: BaseClassViewController, GMSMapViewDelegate{
     
     @IBOutlet weak var UserMapView: GMSMapView!
     @IBOutlet var SegmentedControl: UIView!
+    
+    var pre = UserDefaults.standard
+    
+    var selectedMarker = GMSMarker.init()
 
     @IBAction func SegmentChanged(_ sender: AnyObject) {
         
@@ -36,23 +40,101 @@ class HomeViewController: BaseClassViewController, GMSMapViewDelegate{
         }
 
     }
+    
+    
     override func viewDidLoad() {
     
         super.viewDidLoad()
-
         
-      
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.backItem?.hidesBackButton = true
         
-        let camera = GMSCameraPosition.camera(withLatitude: Double(30.3753),  longitude: Double(69.3451), zoom: 6)
+        
+        let camera = GMSCameraPosition.camera(withLatitude: Double(30.3753),  longitude: Double(69.3451), zoom: 5)
         
         UserMapView.mapType = kGMSTypeNormal
         UserMapView.camera = camera
         UserMapView.delegate = self
         
         
+        let userSpecificKey = "selectedArray" + "_\(pre.object(forKey: "userID") as! Int)"
+        
+        if (pre.object(forKey: userSpecificKey) != nil)
+        {
+            if let data = pre.object(forKey: userSpecificKey) as? NSData
+            {
+                // Get Array from Data
+                let _mySavedList = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [markerCC]
+                showCustomMarkerOnMap(array: _mySavedList)
+                
+            }
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
 
+    
+    func showCustomMarkerOnMap(array : [markerCC])
+    {
+        for markerObj in array {
+            
+            //  Creates a marker in the center of the map.
+            let marker = GMSMarker.init()
+            
+            marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(markerObj.lat), longitude: CLLocationDegrees(markerObj.long))
+            marker.title = markerObj.name as String?
+            marker.snippet = markerObj.snippit as String?
+            
+            marker.icon = #imageLiteral(resourceName: "visited")
+            
+            marker.userData = markerObj.userInfo
+            
+            marker.map = UserMapView
+        }
+    }
+    
+    
+    
+    func mapView(_ mapView: GMSMapView, didLongPressInfoWindowOf marker: GMSMarker) {
+        
+        
+        
+        
+        let alert = UIAlertController(title: "Alert", message: "Do you want to add photos/videos?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
+            action in
+            self.selectedMarker = marker
+            
+            self.performSegue(withIdentifier: "uploading", sender: self)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+            print("yaha kuch nahi ayea ga")
+            // yaha kuch nahi ayea ga
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        
+        
+        let infoWindow = Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)?.first! as! CustomGMSMarker
+        
+        
+        let dic = marker.userData as! Dictionary<String,AnyObject>
+        
+        infoWindow.imgPlace.image = UIImage.init(named: dic["ImageName"] as! String) //#imageLiteral(resourceName: "Mountain-marker2")
+        infoWindow.lbltitle.text = marker.title
+        infoWindow.lblSnippet.text = marker.snippet
+        
+        return infoWindow
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
