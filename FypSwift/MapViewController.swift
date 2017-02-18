@@ -52,11 +52,12 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didLongPressInfoWindowOf marker: GMSMarker) {
         
         
+        
+        
         let alert = UIAlertController(title: "Alert", message: "Do you want to add photos/videos?", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
             action in
-            
-            marker.icon = #imageLiteral(resourceName: "Map-Marker-Flag")
+            self.selectedMarker = marker
             
             self.performSegue(withIdentifier: "uploading", sender: self)
         }))
@@ -86,6 +87,10 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
     }
     
     var arrData = [markerCustomClass]()
+    
+    var userPreviousSelectedMarkers = [markerCC]()
+    
+    var selectedMarker = GMSMarker.init()
     
 
     @IBOutlet weak var mymapView: GMSMapView!
@@ -331,9 +336,30 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
         
         var i = 0
         
+        let pre = UserDefaults.standard
+        
+        if (pre.object(forKey: "selectedArray") != nil)
+        {
+            if let data = pre.object(forKey: "selectedArray") as? NSData
+            {
+                // Get Array from Data
+                userPreviousSelectedMarkers = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [markerCC]
+            }
+        }
+        
+        
         for markerCustomObj in arrData {
             
-            self.addMarkerWithCustomMarkerObj(customMarker: markerCustomObj, withInt: i)
+            var found : Bool = false
+
+            let imageObject2 = userPreviousSelectedMarkers.filter{ $0.name == markerCustomObj.title }
+            
+            if imageObject2.count > 0 {
+                found = true
+            }
+            
+            
+            self.addMarkerWithCustomMarkerObj(customMarker: markerCustomObj, withInt: i, valueFound: found)
             
             i = i + 1
             
@@ -346,7 +372,7 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func addMarkerWithCustomMarkerObj(customMarker : markerCustomClass, withInt int: Int)
+    func addMarkerWithCustomMarkerObj(customMarker : markerCustomClass, withInt int: Int, valueFound found: Bool)
     {
         //  Creates a marker in the center of the map.
         let marker = GMSMarker.init()
@@ -354,9 +380,18 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
         marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(customMarker.lat), longitude: CLLocationDegrees(customMarker.long))
         marker.title = customMarker.title as String?
         marker.snippet = customMarker.snippet as String?
-        marker.icon = customMarker.imageForMarkerIcon
         
-        marker.userData = ["ImageName" : customMarker.TapImage, "Tag" : int]
+        if found {
+            marker.icon = #imageLiteral(resourceName: "visited")
+        }
+        else
+        {
+           marker.icon = customMarker.imageForMarkerIcon
+        }
+        
+        
+        
+        marker.userData = ["ImageName" : customMarker.TapImage, "Tag" : int, "isSelected" : found]
         
         marker.map = mymapView
     }
@@ -372,26 +407,26 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
     
     
     
-    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
-        
-
-    
-        let alert = UIAlertController(title: "Alert", message: "Do you want to add photos/videos?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
-            action in
-            
-            
-            
-            self.performSegue(withIdentifier: "uploading", sender: self)
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
-            print("yaha kuch nahi ayea ga")
-             // yaha kuch nahi ayea ga
-            
-        }))
-        self.present(alert, animated: true, completion: nil)
-        
-    }
+//    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+//        
+//
+//    
+//        let alert = UIAlertController(title: "Alert", message: "Do you want to add photos/videos?", preferredStyle: UIAlertControllerStyle.alert)
+//        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
+//            action in
+//            
+//            
+//            
+//            self.performSegue(withIdentifier: "uploading", sender: self)
+//        }))
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+//            print("yaha kuch nahi ayea ga")
+//             // yaha kuch nahi ayea ga
+//            
+//        }))
+//        self.present(alert, animated: true, completion: nil)
+//        
+//    }
     //zoominout
 //    -(void) mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate{
 //    GMSMarker *marker3 = [[GMSMarker alloc] init];
@@ -408,15 +443,24 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
 
     
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "uploading"
+        {
+            let obj : testExpericeViewController = segue.destination as! testExpericeViewController
+            
+            obj.marker = selectedMarker
+        }
+        
+        
     }
-    */
+ 
 
 }
 
@@ -448,4 +492,10 @@ class CustomGMSMarkerClass : GMSMarker {
     // new functionality to add to SomeType goes here
 }
 
+
+extension Collection {
+    func find( predicate: (Self.Iterator.Element) throws -> Bool) rethrows -> Self.Iterator.Element? {
+        return try index(where: predicate).map({self[$0]})
+    }
+}
 

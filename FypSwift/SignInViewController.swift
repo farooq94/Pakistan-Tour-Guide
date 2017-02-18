@@ -19,6 +19,10 @@ class SignInViewController: BaseClassViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let pre = UserDefaults.standard
+        
+        pre.set(1, forKey: "userID")
    
 
         // Do any additional setup after loading the view.

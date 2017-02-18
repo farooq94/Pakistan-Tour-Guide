@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class testExpericeViewController: BaseClassViewController,OpalImagePickerControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UITextViewDelegate {
     @IBOutlet weak var MyCollectionView: UICollectionView!
     @IBOutlet weak var text_view: UITextView!
     @IBOutlet weak var UploadBtn: UIButton!
     @IBOutlet weak var mycollectionview: UICollectionView!
+    
+    
+    var marker = GMSMarker.init()
     
     var selectedImage = [UIImage]()
     
@@ -57,6 +61,11 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
         
         MyCollectionView.dataSource = self
         MyCollectionView.delegate = self
+        
+        
+        
+        UploadBtn.addTarget(self, action: #selector(self.btnClick(sender:)), for: .touchUpInside)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -156,6 +165,95 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
     }
     
     
+    func btnClick(sender: AnyObject)
+    {
+        let userINfo = marker.userData as! Dictionary<String,AnyObject>
+        
+        let pre = UserDefaults.standard
+        
+        let userID = pre.object(forKey: "userID") as! Int
+        
+        let markerTag = userINfo["Tag"] as! Int
+        
+        var imagePath = NSDate().description
+        imagePath = imagePath.replacingOccurrences(of: " ", with: "")
+        
+        for image in selectedImage {
+            
+            saveImageDocumentDirectory(Image: image, withName: "Tag-\(markerTag)_" + "ID-\(userID)_" + "Date-\(imagePath)" + ".png")
+            
+        }
+        
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        let url = NSURL(fileURLWithPath: path)
+        let filePath = url.path
+        do {
+            let files = try  FileManager.default.contentsOfDirectory(atPath: filePath!)
+            
+
+            for image in files{
+                let data = FileManager.default.contents((atPath: (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appending("/\(image)")))
+                let image = UIImage(data: data!)
+                
+                print("image size is \(image?.size)")
+                
+            }
+            
+            
+        } catch  {
+            print("test")
+        }
+        
+        
+       
+
+   
+        
+        let tempImage = UIImage.init(named: userINfo["ImageName"] as! String)
+        
+        let customMarker = markerCC.init(name: marker.title! as NSString, withsnippit: marker.snippet!, withiconImage: marker.icon!, withimage: tempImage!, withlat: marker.position.latitude, withlong: marker.position.longitude, withuserInfo: marker.userData as! Dictionary<String, Any>)
+        
+        
+        
+        if (pre.object(forKey: "selectedArray") != nil)
+        {
+            if let data = pre.object(forKey: "selectedArray") as? NSData
+            {
+                // Get Array from Data
+                 var _mySavedList = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [markerCC]
+                _mySavedList.append(customMarker)
+                
+                //save back to data
+                let updateddata = NSKeyedArchiver.archivedData(withRootObject: _mySavedList)
+                pre.set(updateddata, forKey: "selectedArray")
+            }
+        }
+        else
+        {
+            var arraytemp = [markerCC]()
+            arraytemp.append(customMarker)
+            
+    
+            let data = NSKeyedArchiver.archivedData(withRootObject: arraytemp)
+      
+            pre.set(data, forKey: "selectedArray")
+            
+        }
+        
+        
+    }
+    
+    func saveImageDocumentDirectory(Image : UIImage, withName name:String){
+        let fileManager = FileManager.default
+        let paths = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(name)
+        let image = Image
+        print(paths)
+        let imageData = UIImageJPEGRepresentation(image, 0.5)
+        print("value Store \(fileManager.createFile(atPath: paths as String, contents: imageData, attributes: nil))")
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -168,3 +266,55 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
 
 
 }
+
+
+class markerCC: NSObject, NSCoding {
+    
+    let name: NSString
+    let snippit: String
+    let iconImage : UIImage
+    let image : UIImage
+    let lat : Double
+    let long : Double
+    let userInfo : Dictionary<String, Any>!
+    
+    
+    init(name: NSString, withsnippit snippit: String, withiconImage iconImage: UIImage, withimage image: UIImage, withlat lat: Double, withlong long: Double, withuserInfo userInfo: Dictionary<String, Any>)
+    {
+        self.name = name
+        self.snippit = snippit
+        self.iconImage = iconImage
+        self.image = image
+        self.lat = lat
+        self.long = long
+        self.userInfo = userInfo
+    }
+    required init(coder decoder: NSCoder) {
+        
+        
+        self.name = decoder.decodeObject(forKey: "name")  as! NSString? ?? ""
+        self.snippit = decoder.decodeObject(forKey: "snippit") as? String ?? ""
+        self.iconImage = (decoder.decodeObject(forKey: "iconImage") as? UIImage ?? nil)!
+        self.image =  (decoder.decodeObject(forKey: "iconImage") as? UIImage ??  nil)!
+        self.lat =  decoder.decodeDouble(forKey: "lat")
+        self.long = decoder.decodeDouble(forKey: "long")
+        self.userInfo = decoder.decodeObject(forKey: "userInfo") as? Dictionary<String, Any> ?? nil
+        
+        
+        
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(name, forKey: "name")
+        coder.encode(snippit, forKey: "snippit")
+        coder.encode(iconImage, forKey: "iconImage")
+        coder.encode(image, forKey: "image")
+        coder.encode(lat, forKey: "lat")
+        coder.encode(long, forKey: "long")
+        coder.encode(userInfo, forKey: "userInfo")
+        
+    }
+    
+    
+}
+
