@@ -9,7 +9,13 @@
 import UIKit
 
 class SplashViewController: BaseClassViewController {
-    @IBOutlet weak var logoImageView: UIImageView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.navigationController?.navigationBar.isHidden = true
+        // Do any additional setup after loading the view.
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

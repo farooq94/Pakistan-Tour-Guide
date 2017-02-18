@@ -22,6 +22,7 @@ class markerCustomClass
  
     var TapImage : String
     
+    var selectedMarker = GMSMarker.init()
     
     init(lat:CGFloat,withLong long:CGFloat,withtitle title:NSString,withsnippet snippet:NSString,withimage Iconimage:UIImage, withTapImage TapImage: String)
     {
@@ -338,9 +339,12 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
         
         let pre = UserDefaults.standard
         
-        if (pre.object(forKey: "selectedArray") != nil)
+        
+        let userSpecifickey = "selectedArray" + "_\(pre.object(forKey: "userID") as! Int)"
+        
+        if (pre.object(forKey: userSpecifickey) != nil)
         {
-            if let data = pre.object(forKey: "selectedArray") as? NSData
+            if let data = pre.object(forKey: userSpecifickey) as? NSData
             {
                 // Get Array from Data
                 userPreviousSelectedMarkers = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [markerCC]

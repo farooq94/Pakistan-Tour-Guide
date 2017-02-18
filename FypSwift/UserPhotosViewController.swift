@@ -10,6 +10,14 @@ import UIKit
 
 class UserPhotosViewController: BaseClassViewController {
 
+    @IBOutlet weak var colView: UICollectionView!
+    
+    var pre = UserDefaults.standard
+    
+    
+    var userImages = [UIImage]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +27,43 @@ class UserPhotosViewController: BaseClassViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+        var userID = pre.object(forKey:"userID") as! Int
+        
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        let url = NSURL(fileURLWithPath: path)
+        let filePath = url.path
+        do {
+            let files = try  FileManager.default.contentsOfDirectory(atPath: filePath!)
+            
+            
+          //  ""
+            
+            
+            for image in files{
+                
+            if image.contains("ID-\(userID)_") {
+                
+                    let data = FileManager.default.contents((atPath: (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appending("/\(image)")))
+                    let image = UIImage(data: data!)
+                
+                    userImages.append(image!)
+                    print("image size is \(image?.size)")
+                }
+            }
+            
+            if  userImages.count > 0{
+               // colView.reloadData()
+            }
+            
+            
+        } catch  {
+            print("test")
+        }
     }
     
 

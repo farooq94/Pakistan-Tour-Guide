@@ -20,9 +20,13 @@ class SignInViewController: BaseClassViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         txtFirstName.text = "aaa@gmail.com"
+        txtPassword.text = "123456"
+
         
         btnLogin.addTarget(self, action:#selector(self.btnClick(sender:)) , for: .touchUpInside)
+        
+        topBar.isHidden = true
 
         // Do any additional setup after loading the view.
     }

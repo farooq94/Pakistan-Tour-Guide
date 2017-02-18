@@ -207,17 +207,18 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
         
        
 
+        // Get user previous marker
    
         
         let tempImage = UIImage.init(named: userINfo["ImageName"] as! String)
         
         let customMarker = markerCC.init(name: marker.title! as NSString, withsnippit: marker.snippet!, withiconImage: marker.icon!, withimage: tempImage!, withlat: marker.position.latitude, withlong: marker.position.longitude, withuserInfo: marker.userData as! Dictionary<String, Any>)
         
+        let userSpecifickey = "selectedArray" + "_\(userID)"
         
-        
-        if (pre.object(forKey: "selectedArray") != nil)
+        if (pre.object(forKey: userSpecifickey) != nil)
         {
-            if let data = pre.object(forKey: "selectedArray") as? NSData
+            if let data = pre.object(forKey: userSpecifickey) as? NSData
             {
                 // Get Array from Data
                  var _mySavedList = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [markerCC]
@@ -225,7 +226,7 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
                 
                 //save back to data
                 let updateddata = NSKeyedArchiver.archivedData(withRootObject: _mySavedList)
-                pre.set(updateddata, forKey: "selectedArray")
+                pre.set(updateddata, forKey: userSpecifickey)
             }
         }
         else
@@ -236,7 +237,7 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
     
             let data = NSKeyedArchiver.archivedData(withRootObject: arraytemp)
       
-            pre.set(data, forKey: "selectedArray")
+            pre.set(data, forKey: userSpecifickey)
             
         }
         

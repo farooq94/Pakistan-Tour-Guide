@@ -35,8 +35,12 @@ class SignUpViewController: BaseClassViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.isHidden = true
 
         btnSignUp.addTarget(self, action:#selector(self.btnClick(sender:)) , for: .touchUpInside)
+        
+        topBar.isHidden = true
         
         // Do any additional setup after loading the view.
     }
