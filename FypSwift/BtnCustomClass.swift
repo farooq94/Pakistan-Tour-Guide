@@ -17,7 +17,9 @@ class BtnCustomClass: UIButton {
     //    self.titleLabel.textColor = UIColor.()
         
         self.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-        self.backgroundColor = .clear
+        self.backgroundColor = UIColor(red:0.15, green:0.31, blue:0.49, alpha:1.0)
+    //    self.backgroundColor = UIColor.blue.withAlphaComponent(0.8)
+        
         self.layer.cornerRadius = 12
         self.layer.borderWidth = 1.5
         self.layer.borderColor = UIColor.white.cgColor
@@ -54,7 +56,7 @@ class BtnCustomClass: UIButton {
         
         
 //        
-//        
+//
 //        extension UIView {
 //            
 //            /**
