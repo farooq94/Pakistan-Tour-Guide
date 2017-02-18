@@ -1,25 +1,18 @@
 //
-//  BaseClassViewController.swift
+//  UserPhotosViewController.swift
 //  FypSwift
 //
-//  Created by MBP on 17/02/2017.
+//  Created by Nano Degree on 18/02/2017.
 //  Copyright © 2017 Nano Degree. All rights reserved.
 //
 
 import UIKit
 
-class BaseClassViewController: UIViewController {
+class UserPhotosViewController: BaseClassViewController {
 
-    let bgImage : UIImageView! = UIImageView.init()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        bgImage.frame = self.view.frame
-        bgImage.image = #imageLiteral(resourceName: "bg (11)")
-        self.view.insertSubview(bgImage, at: 0)
-    
-////////////
+
         // Do any additional setup after loading the view.
     }
 

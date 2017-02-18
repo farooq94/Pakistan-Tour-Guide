@@ -12,6 +12,7 @@ class budgetingViewController: BaseClassViewController,UITableViewDataSource,UIT
 ////////////////
     @IBOutlet weak var bgtableview: UITableView!
     @IBOutlet weak var bgbtn: UIButton!
+    @IBOutlet weak var totalexplbl: UILabel!
     @IBOutlet weak var foodlbl: UILabel!
     @IBOutlet weak var conlbl: UILabel!
     @IBOutlet weak var hotellbl: UILabel!
@@ -187,6 +188,7 @@ class budgetingViewController: BaseClassViewController,UITableViewDataSource,UIT
         
                 foodlbl.text = "\((total * 0.3))"
         
+                totalexplbl.text = "\(total)"
     }
     
     

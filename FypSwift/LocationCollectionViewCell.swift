@@ -12,16 +12,60 @@ import GoogleMaps
 class LocationCollectionViewCell: BaseClassViewController, GMSMapViewDelegate {
     
     @IBOutlet weak var LocationMapView: GMSMapView!
+    var lat: Float!
+    var long: Float!
+    var name : String!
+    var Image : UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: 30.3753,  longitude: 69.3451, zoom: 12)
+       
+        
+        
+        
+        print("hello lat is \(lat!)")
+        print("hello lat is \(long!)")
+        
+        let camera = GMSCameraPosition.camera(withLatitude: Double(lat!),  longitude: Double(long!), zoom: 10)
         
         LocationMapView.mapType = kGMSTypeNormal
         LocationMapView.camera = camera
         LocationMapView.delegate = self
+        
+        
+        
+        let marker = GMSMarker.init()
+        marker.map = LocationMapView
+        marker.position = CLLocationCoordinate2D(latitude: CLLocationDegrees(lat), longitude: CLLocationDegrees(long))
+        marker.title = name as String?
+        //marker.snippet = snippet as String?
+        marker.icon = #imageLiteral(resourceName: "map_marker_blue")
+        
+        //marker.userData = ["ImageName" : customMarker.TapImage, "Tag" : int]
+        
+        marker.map = LocationMapView
+
+        
+        
+        
+       
     }
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        
+        
+        let infoWindow = Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)?.first! as! CustomGMSMarker
+        
+        
+       // let dic = marker.userData as! Dictionary<String,AnyObject>
+        
+        infoWindow.imgPlace.image = Image //#imageLiteral(resourceName: "Mountain-marker2")
+        infoWindow.lbltitle.text = marker.title
+        infoWindow.lblSnippet.text = marker.snippet
+        
+        return infoWindow
+    }
+
     
     
     

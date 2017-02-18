@@ -7,9 +7,10 @@
 //
 
 import UIKit
-
-class HomeViewController: BaseClassViewController {
+import GoogleMaps
+class HomeViewController: BaseClassViewController, GMSMapViewDelegate{
     
+    @IBOutlet weak var UserMapView: GMSMapView!
     @IBOutlet var SegmentedControl: UIView!
 
     @IBAction func SegmentChanged(_ sender: AnyObject) {
@@ -26,6 +27,9 @@ class HomeViewController: BaseClassViewController {
         case 2:
             self.performSegue(withIdentifier: "gotogallery", sender: self)
             break
+        case 3:
+            self.performSegue(withIdentifier: "gotobudgeting", sender: self)
+            break
         
         default:
             break
@@ -33,8 +37,19 @@ class HomeViewController: BaseClassViewController {
 
     }
     override func viewDidLoad() {
+    
         super.viewDidLoad()
 
+        
+      
+        
+        let camera = GMSCameraPosition.camera(withLatitude: Double(30.3753),  longitude: Double(69.3451), zoom: 6)
+        
+        UserMapView.mapType = kGMSTypeNormal
+        UserMapView.camera = camera
+        UserMapView.delegate = self
+        
+        
         // Do any additional setup after loading the view.
     }
 

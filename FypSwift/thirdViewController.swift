@@ -18,12 +18,19 @@ class thirdViewController: BaseClassViewController {
     
     @IBOutlet weak var lbltext: UILabel!
     
+    @IBOutlet weak var btnViewDetail: UIButton!
+    
+    var lati : Float!
+    var longi : Float!
     var image : UIImage!
     var hotelName : String!
     var hotelDesc : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnViewDetail.addTarget(self, action:#selector(self.btnClick(sender:)) , for: .touchUpInside)
+        
     //hotels.isUserInteractionEnabled = false
       //  convnc.isUserInteractionEnabled = false
         switch hotelName
@@ -331,6 +338,14 @@ class thirdViewController: BaseClassViewController {
        //desc.isUserInteractionEnabled = false
         // Do any additional setup after loading the view.
     }
+    
+    
+    func btnClick(sender: AnyObject) {
+        
+        self.performSegue(withIdentifier: "gotoLocationDetail", sender: self)
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -338,14 +353,27 @@ class thirdViewController: BaseClassViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "gotoLocationDetail" {
+            
+            let obj :  LocationCollectionViewCell = segue.destination as! LocationCollectionViewCell
+            
+            obj.lat = lati
+            obj.long = longi
+            obj.name = hotelName
+            obj.Image = image
+        }
+        
+        
+        
     }
-    */
+ 
 
 }
