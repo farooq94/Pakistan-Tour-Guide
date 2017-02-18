@@ -11,21 +11,15 @@ import UIKit
 class BaseClassViewController: UIViewController {
 
     let bgImage : UIImageView! = UIImageView.init()
-    
-    let topBar = UIView.init()
+
+    var topBar = HeaderView.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bgImage.frame = self.view.frame
-        bgImage.image = #imageLiteral(resourceName: "bg (11)")
-        self.view.insertSubview(bgImage, at: 0)
+        topBar = Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)?.first! as! HeaderView
         
-        topBar.frame = CGRect(x: 0, y: 0, width:self.view.frame.size.width , height: 56)
-        
-        topBar.backgroundColor = UIColor.gray
-        
-        self.view.addSubview(topBar)
+       
         topBar.bringSubview(toFront: self.view)
     
 ////////////

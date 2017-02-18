@@ -16,6 +16,9 @@
 		1015BD161E538B3200B8445F /* testExpericeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1015BD151E538B3200B8445F /* testExpericeViewController.swift */; };
 		1034585C1E52315E00FDC48C /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1034585B1E52315E00FDC48C /* CustomView.xib */; };
 		1034585E1E52322C00FDC48C /* CustomGMSMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1034585D1E52322C00FDC48C /* CustomGMSMarker.swift */; };
+		103D9E701E58C9AA00C0FE18 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 103D9E6F1E58C9AA00C0FE18 /* left.png */; };
+		103D9E741E58CB3500C0FE18 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103D9E731E58CB3500C0FE18 /* HeaderView.swift */; };
+		103D9E761E58CB4500C0FE18 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103D9E751E58CB4500C0FE18 /* HeaderView.xib */; };
 		106A8DEC1E4E7FC200E0C622 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DEB1E4E7FC200E0C622 /* GoogleMapsBase.framework */; };
 		106A8DF11E4E7FDC00E0C622 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DEF1E4E7FDC00E0C622 /* GoogleMaps.framework */; };
 		106A8DF21E4E7FDC00E0C622 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106A8DF01E4E7FDC00E0C622 /* GoogleMapsCore.framework */; };
@@ -105,6 +108,9 @@
 		1015BD151E538B3200B8445F /* testExpericeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testExpericeViewController.swift; sourceTree = "<group>"; };
 		1034585B1E52315E00FDC48C /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		1034585D1E52322C00FDC48C /* CustomGMSMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGMSMarker.swift; sourceTree = "<group>"; };
+		103D9E6F1E58C9AA00C0FE18 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		103D9E731E58CB3500C0FE18 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		103D9E751E58CB4500C0FE18 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		106A8DEB1E4E7FC200E0C622 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
 		106A8DEF1E4E7FDC00E0C622 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		106A8DF01E4E7FDC00E0C622 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
@@ -242,6 +248,7 @@
 		8BD422C21E2409E8002C040E = {
 			isa = PBXGroup;
 			children = (
+				103D9E6F1E58C9AA00C0FE18 /* left.png */,
 				8BD422CD1E2409E8002C040E /* FypSwift */,
 				8BD422E21E2409E8002C040E /* FypSwiftTests */,
 				8BD422ED1E2409E8002C040E /* FypSwiftUITests */,
@@ -265,6 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				10BB372B1E5730AB005AABF4 /* BaseClassViewController.swift */,
+				103D9E731E58CB3500C0FE18 /* HeaderView.swift */,
+				103D9E751E58CB4500C0FE18 /* HeaderView.xib */,
 				8BCCF0BF1E56A08F00776425 /* budgetingViewController.swift */,
 				8BCCF0C01E56A08F00776425 /* fourthViewController.swift */,
 				8BCCF0C11E56A08F00776425 /* galleryCollectionViewCell.swift */,
@@ -469,8 +478,10 @@
 				8BFB135D1E57657E00F41871 /* siral.jpg in Resources */,
 				8BD422D91E2409E8002C040E /* LaunchScreen.storyboard in Resources */,
 				8BFB13591E57657E00F41871 /* Phandar Lake.jpg in Resources */,
+				103D9E761E58CB4500C0FE18 /* HeaderView.xib in Resources */,
 				8BFB13521E57657E00F41871 /* Chitral.jpg in Resources */,
 				8BD422D41E2409E8002C040E /* Main.storyboard in Resources */,
+				103D9E701E58C9AA00C0FE18 /* left.png in Resources */,
 				8BFB135E1E57657E00F41871 /* Sost Dry Port.jpg in Resources */,
 				8BFB135B1E57657E00F41871 /* Rush-Lake.jpg in Resources */,
 				106A8DF41E4E7FF900E0C622 /* GoogleMaps.bundle in Resources */,
@@ -583,6 +594,7 @@
 				8BD422D11E2409E8002C040E /* ViewController.swift in Sources */,
 				10BB372C1E5730AB005AABF4 /* BaseClassViewController.swift in Sources */,
 				8B9822501E577EAE00F28D84 /* LocationCollectionViewCell.swift in Sources */,
+				103D9E741E58CB3500C0FE18 /* HeaderView.swift in Sources */,
 				8BD422CF1E2409E8002C040E /* AppDelegate.swift in Sources */,
 				8B561FE61E57E43700ECA8C9 /* ImageViewCustom.swift in Sources */,
 				8BCCF0C41E56A08F00776425 /* budgetingViewController.swift in Sources */,
