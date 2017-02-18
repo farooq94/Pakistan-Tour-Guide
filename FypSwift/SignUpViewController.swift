@@ -16,6 +16,7 @@ class SignUpViewController: BaseClassViewController {
     @IBOutlet var txtPhone : UITextField!
     @IBOutlet var txtEmail : UITextField!
     @IBOutlet var txtPassword : UITextField!
+    @IBOutlet var txtConPassword : UITextField!
     
     @IBOutlet var userImage : UIImageView!
     
@@ -23,6 +24,7 @@ class SignUpViewController: BaseClassViewController {
     @IBOutlet var lblPhone : UILabel!
     @IBOutlet var lblEmail : UILabel!
     @IBOutlet var lblPassword : UILabel!
+    @IBOutlet var lblConPassword : UILabel!
     
     
     
@@ -52,7 +54,7 @@ class SignUpViewController: BaseClassViewController {
             
             if pre.object(forKey: "appUsers") != nil
             {
-                let arr : Array = pre.object(forKey: "appUsers") as! Array <Dictionary<String,AnyObject>>
+                var arr : Array = pre.object(forKey: "appUsers") as! Array <Dictionary<String,AnyObject>>
                 
                 print(arr)
                 
@@ -73,6 +75,9 @@ class SignUpViewController: BaseClassViewController {
                     dic["Password"] = txtPassword.text
                     dic["userID"] = 1 + arr.count
                     
+                    arr.append(dic as [String : AnyObject])
+                    pre.set(arr, forKey: "appUsers") // Append in prvious array and save 
+                    
                     createUser(dic: dic as NSDictionary)
                 }
             }
@@ -84,6 +89,10 @@ class SignUpViewController: BaseClassViewController {
                 dic["Password"] = txtPassword.text
                 dic["userID"] = 1
                 
+                let arr = [dic]
+                pre.set(arr, forKey: "appUsers") // First Time set value
+               
+                
                 createUser(dic: dic as NSDictionary)
             }
         }
@@ -91,10 +100,11 @@ class SignUpViewController: BaseClassViewController {
     
     func createUser(dic : NSDictionary )
     {
+        pre.set(dic["userID"] as! Int, forKey:"userID")
+        pre.set(dic, forKey: "UserData")
+       
         
-        let arr = [dic]
-        pre.set(arr, forKey: "appUsers")
-        self.performSegue(withIdentifier: "gotohomeaftergignup", sender: self)
+        self.performSegue(withIdentifier: "gotohomeaftersignup", sender: self)
     }
     
     
@@ -107,13 +117,7 @@ class SignUpViewController: BaseClassViewController {
             })
              return false
         }
-        else if txtPhone.text == ""  {
-            showAlertWithMessag(with: "Please enter Phone Number", completionHandler: {
-            })
-            return false
-
-        }
-        else if txtEmail.text == ""  {
+        else if txtEmail.text == ""  && isValidEmail(testStr: txtEmail.text!) {
             showAlertWithMessag(with: "Please enter valid Email", completionHandler: {
             })
             return false
@@ -122,6 +126,18 @@ class SignUpViewController: BaseClassViewController {
         else if txtPassword.text == ""  {
             showAlertWithMessag(with: "Please enter Password", completionHandler: {
             })
+            return false
+        }
+        else if txtPassword.text != txtConPassword.text  {
+            showAlertWithMessag(with: "Password and Confirm Password are not same", completionHandler: {
+            })
+            return false
+        }
+        else if (txtPhone.text! == "") && ((txtPhone.text?.characters.count)! > 11 && (txtPhone.text?.hasPrefix("03") )!) {
+            showAlertWithMessag(with: "Please enter Phone Number", completionHandler: {
+            })
+            return false
+            
         }
         return true
     }
@@ -143,6 +159,14 @@ class SignUpViewController: BaseClassViewController {
     
     }
     
+    
+    func isValidEmail(testStr:String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
    
     
 
