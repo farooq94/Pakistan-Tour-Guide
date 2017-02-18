@@ -32,7 +32,7 @@ class ViewController: BaseClassViewController {
     @IBAction func ChangePage(_ sender: AnyObject) {
         
         
-        var btn = sender as! UIButton
+        let btn = sender as! UIButton
         
         
          selectedBtn = btn.tag
