@@ -30,6 +30,14 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//    _topBar.lblTtitle.text = "ViewConntroller"
+//    delegate = self
+//    
+//    func headerBackBtnClick() {
+//        
+//        self.performSegue(withIdentifier: "", sender: self)
+//    }
+//    
 
     /*
     // MARK: - Navigation

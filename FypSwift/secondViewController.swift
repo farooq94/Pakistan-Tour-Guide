@@ -8,7 +8,7 @@
 
 import UIKit
 
-class secondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class secondViewController: BaseClassViewController, UICollectionViewDelegate, UICollectionViewDataSource,CustomHeaderdelegate {
     
     @IBOutlet weak var lblTitle: UILabel!
     struct ceoObject {
@@ -33,6 +33,8 @@ class secondViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        delegate = self
         
         if CityTitle == "" {
             let pre = UserDefaults.standard
@@ -154,6 +156,8 @@ class secondViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         lblTitle.text = CityTitle
         
+        _topBar.lblTtitle.text = CityTitle
+        
         // Do any additional setup after loading the view.
     }
     
@@ -200,7 +204,10 @@ class secondViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     
     
-    
+    func headerBackBtnClick() {
+        
+        self.performSegue(withIdentifier: "backTogalleryFromProDetail", sender: self)
+    }
     
     
     // MARK: - Navigation

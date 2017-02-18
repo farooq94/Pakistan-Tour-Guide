@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserPhotosViewController: BaseClassViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class UserPhotosViewController: BaseClassViewController, UICollectionViewDataSource, UICollectionViewDelegate,CustomHeaderdelegate {
 
     @IBOutlet weak var colView: UICollectionView!
  
@@ -20,6 +20,9 @@ class UserPhotosViewController: BaseClassViewController, UICollectionViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        _topBar.lblTtitle.text = "My Images"
+        delegate = self
         
         colView.delegate = self
         colView.dataSource = self
@@ -78,6 +81,10 @@ class UserPhotosViewController: BaseClassViewController, UICollectionViewDataSou
         return cell
     }
 
+    func headerBackBtnClick() {
+        
+         self.performSegue(withIdentifier: "backToProfileFromImage", sender: self)
+    }
     
     
     // Do any additional setup after loading the view.

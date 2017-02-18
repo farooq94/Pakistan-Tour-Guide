@@ -8,7 +8,7 @@
 
 import UIKit
 
-class thirdViewController: BaseClassViewController {
+class thirdViewController: BaseClassViewController,CustomHeaderdelegate {
    
     @IBOutlet weak var hotels: UITextView!
    
@@ -20,6 +20,9 @@ class thirdViewController: BaseClassViewController {
     
     @IBOutlet weak var btnViewDetail: UIButton!
     
+    
+    var pre  = UserDefaults.standard
+    
     var lati : Float!
     var longi : Float!
     var image : UIImage!
@@ -28,6 +31,22 @@ class thirdViewController: BaseClassViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        _topBar.lblTtitle.text = hotelName
+        delegate = self
+        
+        if hotelDesc != nil {
+            pre.set(hotelDesc, forKey: "hotelDesc")
+       
+        }
+        else
+        {
+            hotelDesc = pre.object(forKey: "hotelDesc") as! String
+        }
+        
+        
+        
+        
         
         btnViewDetail.addTarget(self, action:#selector(self.btnClick(sender:)) , for: .touchUpInside)
         
@@ -333,7 +352,7 @@ class thirdViewController: BaseClassViewController {
         }
         imageview.image = image
         desc.text = hotelDesc
-        lbltext.text = hotelName
+
         
        //desc.isUserInteractionEnabled = false
         // Do any additional setup after loading the view.
@@ -353,6 +372,10 @@ class thirdViewController: BaseClassViewController {
     }
     
 
+    func headerBackBtnClick() {
+        
+        self.performSegue(withIdentifier: "backToProFromCity", sender: self)
+    }
     
     // MARK: - Navigation
 

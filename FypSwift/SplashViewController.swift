@@ -16,7 +16,7 @@ class SplashViewController: BaseClassViewController {
         super.viewDidLoad()
         
         
-        topBar.isHidden = true
+        _topBar.isHidden = true
 
         self.navigationController?.navigationBar.isHidden = true
         if logoImageView != nil {

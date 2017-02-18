@@ -8,7 +8,7 @@
 
 import UIKit
 
-class budgetingViewController: BaseClassViewController,UITableViewDataSource,UITableViewDelegate {
+class budgetingViewController: BaseClassViewController,UITableViewDataSource,UITableViewDelegate, CustomHeaderdelegate {
 ////////////////
     @IBOutlet weak var TranspView: UIView!
     @IBOutlet weak var bgtableview: UITableView!
@@ -54,6 +54,9 @@ class budgetingViewController: BaseClassViewController,UITableViewDataSource,UIT
     
     override func viewWillAppear(_ animated: Bool) {
         animateTable()
+        
+        _topBar.lblTtitle.text = "Budgeting"
+        delegate = self
     }
     
     func animateTable() {
@@ -325,8 +328,10 @@ class budgetingViewController: BaseClassViewController,UITableViewDataSource,UIT
         return Float(totalWetg)
     }
     
-    
-    
+    func headerBackBtnClick() {
+        
+        self.performSegue(withIdentifier: "bckToHomeFromBudget", sender: self)
+    }
     
     
     /*

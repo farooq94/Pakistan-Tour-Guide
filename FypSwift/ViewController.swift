@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: BaseClassViewController {
+class ViewController: BaseClassViewController,CustomHeaderdelegate {
     
     @IBOutlet var segmentedcontrol : UISegmentedControl!
     
@@ -21,6 +21,10 @@ class ViewController: BaseClassViewController {
     override func viewDidLoad() {
        
         super.viewDidLoad()
+        
+        _topBar.lblTtitle.text = "ViewConntroller"
+        delegate = self
+        
         // Do any additional setup after loading the view, typically from a nib.
     
     }
@@ -45,6 +49,12 @@ class ViewController: BaseClassViewController {
         super.didReceiveMemoryWarning()
       
         // Dispose of any resources that can be recreated.
+    }
+    
+
+    func headerBackBtnClick() {
+        
+        self.performSegue(withIdentifier: "", sender: self)
     }
     
     

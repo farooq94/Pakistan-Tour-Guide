@@ -16,26 +16,56 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jpq-U3-Tk9">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUV-Sy-A5f">
+                    <rect key="frame" x="0.0" y="8" width="414" height="40"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMY-EA-elo">
-                    <rect key="frame" x="20" y="0.0" width="62" height="56"/>
-                    <state key="normal" title="Button" image="left.png"/>
+                    <rect key="frame" x="0.0" y="0.0" width="62" height="56"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" image="left"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8C6-vN-0OA">
+                    <rect key="frame" x="352" y="0.0" width="62" height="56"/>
+                    <state key="normal" image="Logout"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="oMY-EA-elo" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.15" id="1Kc-Of-eeQ"/>
+                <constraint firstItem="8C6-vN-0OA" firstAttribute="centerY" secondItem="oMY-EA-elo" secondAttribute="centerY" id="6Ac-X2-ISv"/>
                 <constraint firstItem="oMY-EA-elo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GYi-hm-AGl"/>
+                <constraint firstItem="OUV-Sy-A5f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IeU-Pi-OWS"/>
+                <constraint firstAttribute="trailing" secondItem="OUV-Sy-A5f" secondAttribute="trailing" id="IkU-hh-Nmk"/>
+                <constraint firstAttribute="trailing" secondItem="Jpq-U3-Tk9" secondAttribute="trailing" id="Q9t-Vr-e1w"/>
+                <constraint firstItem="Jpq-U3-Tk9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QAk-sz-Rni"/>
+                <constraint firstAttribute="trailing" secondItem="8C6-vN-0OA" secondAttribute="trailing" id="Ue5-2P-Mex"/>
                 <constraint firstAttribute="bottom" secondItem="oMY-EA-elo" secondAttribute="bottom" id="ZVX-UW-7GD"/>
-                <constraint firstItem="oMY-EA-elo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="okN-fK-gqS"/>
+                <constraint firstItem="8C6-vN-0OA" firstAttribute="height" secondItem="oMY-EA-elo" secondAttribute="height" id="bME-EW-5OO"/>
+                <constraint firstAttribute="bottom" secondItem="Jpq-U3-Tk9" secondAttribute="bottom" id="bgj-9m-hs1"/>
+                <constraint firstItem="OUV-Sy-A5f" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eUh-XR-nkX"/>
+                <constraint firstItem="8C6-vN-0OA" firstAttribute="width" secondItem="oMY-EA-elo" secondAttribute="width" id="gux-fi-QaT"/>
+                <constraint firstItem="oMY-EA-elo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="okN-fK-gqS"/>
+                <constraint firstItem="Jpq-U3-Tk9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xAE-lY-JFU"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bgBack" destination="Jpq-U3-Tk9" id="r7q-mc-4y7"/>
                 <outlet property="btnBack" destination="oMY-EA-elo" id="rF5-Jn-AHC"/>
+                <outlet property="btnLogOut" destination="8C6-vN-0OA" id="feQ-np-01a"/>
+                <outlet property="lblTtitle" destination="OUV-Sy-A5f" id="35H-GM-pD8"/>
             </connections>
             <point key="canvasLocation" x="-82" y="-219"/>
         </view>
     </objects>
     <resources>
-        <image name="left.png" width="128" height="128"/>
+        <image name="Logout" width="27" height="27"/>
+        <image name="left" width="16" height="28"/>
     </resources>
 </document>

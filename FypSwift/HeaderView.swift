@@ -10,7 +10,11 @@ import UIKit
 
 class HeaderView: UIView {
 
+    @IBOutlet weak var bgBack: UIView!
     @IBOutlet weak var btnBack: UIButton!
+    
+    @IBOutlet weak var btnLogOut: UIButton!
+    @IBOutlet weak var lblTtitle: UILabel!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -20,6 +24,11 @@ class HeaderView: UIView {
     */
 
     override func awakeFromNib() {
+        
+        self.backgroundColor = UIColor.clear
+        bgBack.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+    
+        btnLogOut.isHidden = true
         
     }
 }

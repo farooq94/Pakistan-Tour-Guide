@@ -8,7 +8,7 @@
 
 import UIKit
 import GoogleMaps
-class HomeViewController: BaseClassViewController, GMSMapViewDelegate{
+class HomeViewController: BaseClassViewController, GMSMapViewDelegate,CustomHeaderdelegate{
     
     @IBOutlet weak var UserMapView: GMSMapView!
     @IBOutlet var SegmentedControl: UIView!
@@ -46,8 +46,10 @@ class HomeViewController: BaseClassViewController, GMSMapViewDelegate{
     
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.isHidden = false
-        self.navigationController?.navigationBar.backItem?.hidesBackButton = true
+        _topBar.lblTtitle.text = "Home"
+        delegate = self
+        _topBar.btnBack.isHidden = true
+        _topBar.btnLogOut.isHidden = false
         
         
         let camera = GMSCameraPosition.camera(withLatitude: Double(30.3753),  longitude: Double(69.3451), zoom: 5)
@@ -96,28 +98,6 @@ class HomeViewController: BaseClassViewController, GMSMapViewDelegate{
     
     
     
-    func mapView(_ mapView: GMSMapView, didLongPressInfoWindowOf marker: GMSMarker) {
-        
-        
-        
-        
-        let alert = UIAlertController(title: "Alert", message: "Do you want to add photos/videos?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
-            action in
-            self.selectedMarker = marker
-            
-            self.performSegue(withIdentifier: "uploading", sender: self)
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
-            print("yaha kuch nahi ayea ga")
-            // yaha kuch nahi ayea ga
-            
-        }))
-        self.present(alert, animated: true, completion: nil)
-        
-    }
-    
-    
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         
         
@@ -140,6 +120,10 @@ class HomeViewController: BaseClassViewController, GMSMapViewDelegate{
         // Dispose of any resources that can be recreated.
     }
     
+    func headerBackBtnClick() {
+        
+         self.performSegue(withIdentifier: "Logout", sender: self)
+    }
 
     /*
     // MARK: - Navigation

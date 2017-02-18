@@ -39,7 +39,7 @@ class SignUpViewController: BaseClassViewController {
         
         btnSignUp.addTarget(self, action:#selector(self.btnClick(sender:)) , for: .touchUpInside)
         
-        topBar.isHidden = true
+        _topBar.isHidden = true
         
         // Do any additional setup after loading the view.
     }

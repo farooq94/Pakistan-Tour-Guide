@@ -36,7 +36,7 @@ class markerCustomClass
     }
 }
 
-class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
+class MapViewController: BaseClassViewController ,GMSMapViewDelegate,CustomHeaderdelegate {
     
     
     
@@ -99,6 +99,10 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
     override func viewDidLoad() {
    //      let otherVC = SecondViewController()
         super.viewDidLoad()
+        
+        _topBar.lblTtitle.text = "Map"
+        delegate = self
+        
 
         //zooooooom
 //        
@@ -463,6 +467,12 @@ class MapViewController: BaseClassViewController ,GMSMapViewDelegate {
         }
         
         
+    }
+
+    
+    func headerBackBtnClick() {
+        
+        self.performSegue(withIdentifier: "goBackTohomeFromMap", sender: self)
     }
  
 

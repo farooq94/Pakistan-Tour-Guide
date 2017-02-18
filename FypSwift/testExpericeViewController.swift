@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class testExpericeViewController: BaseClassViewController,OpalImagePickerControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UITextViewDelegate {
+class testExpericeViewController: BaseClassViewController,OpalImagePickerControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UITextViewDelegate,CustomHeaderdelegate {
     @IBOutlet weak var MyCollectionView: UICollectionView!
     @IBOutlet weak var text_view: UITextView!
     @IBOutlet weak var UploadBtn: UIButton!
@@ -35,7 +35,7 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
         imagePicker.selectionImageTintColor = UIColor.black
         
         //Change image to X rather than checkmark
-        imagePicker.selectionImage = #imageLiteral(resourceName: "map-marker")
+        imagePicker.selectionImage = #imageLiteral(resourceName: "checkmark")
         
         imagePicker.imagePickerDelegate = self
         present(imagePicker, animated: true, completion: nil)
@@ -62,7 +62,8 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
         MyCollectionView.dataSource = self
         MyCollectionView.delegate = self
         
-        
+        _topBar.lblTtitle.text = "Experience"
+        delegate = self
         
         UploadBtn.addTarget(self, action: #selector(self.btnClick(sender:)), for: .touchUpInside)
         
@@ -241,7 +242,8 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
             
         }
         
-        
+        self.performSegue(withIdentifier: "backToMap", sender: self)
+
     }
     
     func saveImageDocumentDirectory(Image : UIImage, withName name:String){
@@ -264,6 +266,13 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
         // Pass the selected object to the new view controller.
     }
     */
+    
+
+    
+    func headerBackBtnClick() {
+        
+        self.performSegue(withIdentifier: "backToMap", sender: self)
+    }
 
 
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZeeViewController: BaseClassViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ZeeViewController: BaseClassViewController, UICollectionViewDelegate, UICollectionViewDataSource,CustomHeaderdelegate {
     
     @IBOutlet weak var mycollectionview: UICollectionView!
     
@@ -42,6 +42,8 @@ class ZeeViewController: BaseClassViewController, UICollectionViewDelegate, UICo
         super.viewDidLoad()
         
         
+        _topBar.lblTtitle.text = "Gallery"
+        delegate = self
 
 
         ceoArray.append(ceoObject(vcbtn:"SINDH", myimageview: UIImage(named: "sindh1")!) )
@@ -174,6 +176,12 @@ class ZeeViewController: BaseClassViewController, UICollectionViewDelegate, UICo
         
         self.performSegue(withIdentifier: "GoToDetail", sender: self)
         
+    }
+    
+    
+    func headerBackBtnClick() {
+        
+        self.performSegue(withIdentifier: "backToHomeFromGallery", sender: self)
     }
     
     

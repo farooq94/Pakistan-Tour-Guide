@@ -8,10 +8,14 @@
 
 import UIKit
 
-class GalleryViewController: BaseClassViewController {
+class GalleryViewController: BaseClassViewController,CustomHeaderdelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        _topBar.lblTtitle.text = "Gallery"
+        delegate = self
+        
 
         // Do any additional setup after loading the view.
     }
@@ -19,6 +23,12 @@ class GalleryViewController: BaseClassViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    
+    func headerBackBtnClick() {
+        
+        self.performSegue(withIdentifier: "backToHomeFromGallery", sender: self)
     }
     
 

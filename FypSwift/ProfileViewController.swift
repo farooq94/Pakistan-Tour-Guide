@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: BaseClassViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class ProfileViewController: BaseClassViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate, CustomHeaderdelegate {
     
     @IBOutlet weak var fourthimage: UIImageView!
     @IBOutlet weak var thirdimage: UIImageView!
@@ -31,8 +31,28 @@ class ProfileViewController: BaseClassViewController, UIImagePickerControllerDel
     var dic = Dictionary<String,AnyObject>()
     
     
+    func headerBackBtnClick() {
+        
+        if firstimage != nil {
+            self.performSegue(withIdentifier: "backtoLoginFromAboutUs", sender: self)
+        }
+        else
+        {
+            self.performSegue(withIdentifier: "gobackTohomeFromprofile", sender: self)
+        }
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+        
+        
         
         // Condition check which form is load
         
@@ -43,11 +63,14 @@ class ProfileViewController: BaseClassViewController, UIImagePickerControllerDel
             secondimage.image = #imageLiteral(resourceName: "zee")
             thirdimage.image = #imageLiteral(resourceName: "baig")
             fourthimage.image = #imageLiteral(resourceName: "ustaad")
+            
+            _topBar.lblTtitle.text = "About Us"
         }
         else
         {
             // Edit profile page is appear on screen
             
+            _topBar.lblTtitle.text = "Profile"
             
             imagePicker.delegate = self
             imagePicker.allowsEditing = false
@@ -55,12 +78,12 @@ class ProfileViewController: BaseClassViewController, UIImagePickerControllerDel
             
             btnClick.addTarget(self, action: #selector(self.btnClick(sender:)), for: .touchUpInside)
             dic = pre.object(forKey:"UserData") as! Dictionary<String, AnyObject>
-            
+            profileimage.image = #imageLiteral(resourceName: "profile")
             
             btnImagePicker.addTarget(self, action: #selector(selectProfile(sender:)), for: .touchUpInside)
         }
         
-       
+        delegate = self
         
         
         
@@ -210,14 +233,13 @@ class ProfileViewController: BaseClassViewController, UIImagePickerControllerDel
         }
         else
         {
-          //  profileimage.image = profile
+            profileimage.image = #imageLiteral(resourceName: "profile")
         }
         
-        
-    
-        
-        
     }
+    
+   
+    
     
     
     

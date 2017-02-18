@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class LocationCollectionViewCell: BaseClassViewController, GMSMapViewDelegate {
+class LocationCollectionViewCell: BaseClassViewController, GMSMapViewDelegate,CustomHeaderdelegate {
     
     @IBOutlet weak var LocationMapView: GMSMapView!
     var lat: Float!
@@ -20,7 +20,8 @@ class LocationCollectionViewCell: BaseClassViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        _topBar.lblTtitle.text = name
+        delegate = self
         
         
         
@@ -66,7 +67,24 @@ class LocationCollectionViewCell: BaseClassViewController, GMSMapViewDelegate {
         return infoWindow
     }
 
+    func headerBackBtnClick() {
+        
+         self.performSegue(withIdentifier: "backToCityFromLocation", sender: self)
+    }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "backToCityFromLocation" {
+            
+            let obj : thirdViewController = segue.destination as! thirdViewController
+            
+            obj.hotelName = name
+            obj.image = Image
+            
+        }
+        
+    }
     
     
     
