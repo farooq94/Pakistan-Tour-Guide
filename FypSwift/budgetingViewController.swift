@@ -10,6 +10,7 @@ import UIKit
 
 class budgetingViewController: BaseClassViewController,UITableViewDataSource,UITableViewDelegate {
 ////////////////
+    @IBOutlet weak var TranspView: UIView!
     @IBOutlet weak var bgtableview: UITableView!
     @IBOutlet weak var bgbtn: UIButton!
     @IBOutlet weak var totalexplbl: UILabel!
@@ -38,8 +39,61 @@ class budgetingViewController: BaseClassViewController,UITableViewDataSource,UIT
     var w : Int = 0
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        animateTable()
+    }
+    
+    func animateTable() {
+        bgtableview.reloadData()
+        
+        let cells = bgtableview.visibleCells
+        let tableHeight: CGFloat = bgtableview.bounds.size.height
+        
+        for i in cells {
+            let cell: UITableViewCell = i as UITableViewCell
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
+        }
+        
+        var index = 0
+        
+        for a in cells {
+            let cell: UITableViewCell = a as UITableViewCell
+            UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0);
+                }, completion: nil)
+            
+            index += 1
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         
         bgbtn.addTarget(self, action: #selector(self.btnClick(sender:)), for: .touchUpInside)

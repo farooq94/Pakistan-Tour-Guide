@@ -25,6 +25,20 @@ class CustomGMSMarker: UIView {
     */
     
     override func awakeFromNib() {
+        
+        UIView.animate(withDuration: 2.0,
+                       delay: 0,
+                       usingSpringWithDamping: CGFloat(0.20),
+                       initialSpringVelocity: CGFloat(6.0),
+                       options: UIViewAnimationOptions.allowUserInteraction,
+                       animations: {
+                        self.transform = CGAffineTransform.identity
+            },
+                       completion: { Void in()  }
+        )
+        
+        
+        
         bgView.alpha = 0.5
     }
 
