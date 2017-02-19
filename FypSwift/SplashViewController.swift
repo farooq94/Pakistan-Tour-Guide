@@ -23,6 +23,9 @@ class SplashViewController: BaseClassViewController {
             self.logoImageView.center = self.logoImageView.center
         }
         
+        self.logoImageView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+
+        
         
         // Do any additional setup after loading the view.
     }
@@ -33,11 +36,16 @@ class SplashViewController: BaseClassViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.0, options: [] , animations: {
-            self.logoImageView.center = CGPoint(x: self.logoImageView.center.x-75, y: self.logoImageView.center.x-75)
         
-            
-            }, completion: nil)
+        UIView.animate(withDuration: 1.4,
+                       animations: {
+                        self.logoImageView.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
+        },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.25) {
+                            self.logoImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        }
+        })
     }
     
     

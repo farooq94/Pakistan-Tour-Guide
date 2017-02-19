@@ -43,7 +43,7 @@ class BtnCustomClass: UIButton {
                        options: UIViewAnimationOptions.allowUserInteraction,
                        animations: {
                         self.transform = CGAffineTransform.identity
-            },
+        },
                        completion: { Void in()  }
         )
     }

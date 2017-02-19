@@ -59,12 +59,14 @@ class ProfileViewController: BaseClassViewController, UIImagePickerControllerDel
         if firstimage != nil {
             
             
-            firstimage.image = #imageLiteral(resourceName: "farooq")
+            firstimage.image = #imageLiteral(resourceName: "ustaad")
             secondimage.image = #imageLiteral(resourceName: "zee")
-            thirdimage.image = #imageLiteral(resourceName: "baig")
-            fourthimage.image = #imageLiteral(resourceName: "ustaad")
+            thirdimage.image = #imageLiteral(resourceName: "farooq")
+            fourthimage.image = #imageLiteral(resourceName: "baig")
             
             _topBar.lblTtitle.text = "About Us"
+            
+            
         }
         else
         {
@@ -81,6 +83,10 @@ class ProfileViewController: BaseClassViewController, UIImagePickerControllerDel
             profileimage.image = #imageLiteral(resourceName: "profile")
             
             btnImagePicker.addTarget(self, action: #selector(selectProfile(sender:)), for: .touchUpInside)
+            
+            self.profileimage.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            
+            
         }
         
         delegate = self
@@ -107,9 +113,18 @@ class ProfileViewController: BaseClassViewController, UIImagePickerControllerDel
             
             loadImage(name: "ProfilePic_\(dic["userID"] as! Int)")
             
+            
+            
+        }
+        else
+        {
+            self.forAboutUS()
         }
         
     }
+    
+    
+    
     
     func btnClick(sender: AnyObject)
     {
@@ -236,10 +251,73 @@ class ProfileViewController: BaseClassViewController, UIImagePickerControllerDel
             profileimage.image = #imageLiteral(resourceName: "profile")
         }
         
+        UIView.animate(withDuration: 0.5,
+                       animations: {
+                        self.profileimage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.25) {
+                            self.profileimage.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        }
+        })
+        
     }
     
    
-    
+    func forAboutUS()   {
+        
+        
+        
+        self.firstimage.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        self.secondimage.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        self.thirdimage.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        self.fourthimage.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        self.firstimage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.15) {
+                            self.firstimage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                        }
+                        
+                        UIView.animate(withDuration: 0.2,
+                                       animations: {
+                                        self.secondimage.transform = CGAffineTransform(scaleX: 1, y: 1)
+                        },
+                                       completion: { _ in
+                                        UIView.animate(withDuration: 0.15) {
+                                            self.secondimage.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                                        }
+                                        
+                                        UIView.animate(withDuration: 0.2,
+                                                       animations: {
+                                                        self.thirdimage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                                        },
+                                                       completion: { _ in
+                                                        UIView.animate(withDuration: 0.15) {
+                                                            self.thirdimage.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                                                        }
+                                                       
+                                                        UIView.animate(withDuration: 0.2,
+                                                                       animations: {
+                                                                        self.fourthimage.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                                                        },
+                                                                       completion: { _ in
+                                                                        UIView.animate(withDuration: 0.15) {
+                                                                            self.fourthimage.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                                                                        }
+                                                                        
+                                                                        
+                                                        })
+                                                        
+                                        })
+                                        
+                        })
+                        
+        })
+    }
     
     
     
@@ -255,3 +333,38 @@ class ProfileViewController: BaseClassViewController, UIImagePickerControllerDel
      */
     
 }
+
+
+class Animate {
+    
+    static func animate(view: UIView, withLargeDuration LD : TimeInterval, withSmallDuration SD : TimeInterval ) {
+        UIView.animate(withDuration: LD,
+                       animations: {
+                        view.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        },
+                       completion: { _ in
+                        UIView.animate(withDuration: SD) {
+                            view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        }
+        })
+    }
+    
+    
+    static func animateWIthDumpEffect(view: UIView, withLargeDuration LD : TimeInterval)
+    {
+        
+        UIView.animate(withDuration: LD,
+                       delay: 0,
+                       usingSpringWithDamping: CGFloat(0.4),
+                       initialSpringVelocity: CGFloat(6.0),
+                       options: UIViewAnimationOptions.allowUserInteraction,
+                       animations: {
+                        view.transform = CGAffineTransform.identity
+        },
+                       completion: { Void in()  }
+        )
+    }
+    
+    
+}
+
