@@ -32,10 +32,6 @@ class BtnCustomClass: UIButton {
         
         
         
-        
-        
-        
-        
         UIView.animate(withDuration: 2.0,
                        delay: 0,
                        usingSpringWithDamping: CGFloat(0.20),

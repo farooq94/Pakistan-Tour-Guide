@@ -350,6 +350,16 @@ class Animate {
     }
     
     
+    static func animateWithALpha(view: UIView, Duration: TimeInterval)
+    {
+        UIView.animate(withDuration: Duration,
+                       animations: {
+                        view.alpha = 1
+        },completion: nil)
+    }
+    
+    
+    
     static func animateWIthDumpEffect(view: UIView, withLargeDuration LD : TimeInterval)
     {
         

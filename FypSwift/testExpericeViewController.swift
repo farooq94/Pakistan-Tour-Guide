@@ -65,6 +65,8 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
         _topBar.lblTtitle.text = "Experience"
         delegate = self
         
+        
+        
         UploadBtn.addTarget(self, action: #selector(self.btnClick(sender:)), for: .touchUpInside)
         
         // Do any additional setup after loading the view.
@@ -90,6 +92,8 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
         
         
     }
+    
+    
     
     
     
@@ -176,12 +180,19 @@ class testExpericeViewController: BaseClassViewController,OpalImagePickerControl
         
         let markerTag = userINfo["Tag"] as! Int
         
-        var imagePath = NSDate().description
-        imagePath = imagePath.replacingOccurrences(of: " ", with: "")
+        
+       var number = 0
         
         for image in selectedImage {
             
-            saveImageDocumentDirectory(Image: image, withName: "Tag-\(markerTag)_" + "ID-\(userID)_" + "Date-\(imagePath)" + ".png")
+            var imagePath = NSDate().description
+  
+            number = number + 1
+            
+            
+            imagePath = imagePath.replacingOccurrences(of: " ", with: "")
+            
+            saveImageDocumentDirectory(Image: image, withName: "Tag-\(markerTag)_" + "ID-\(userID)_" + "Date-\(imagePath)_\(number)" + ".png")
             
         }
         

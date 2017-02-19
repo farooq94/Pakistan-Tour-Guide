@@ -18,6 +18,11 @@ class budgetingViewController: BaseClassViewController,UITableViewDataSource,UIT
     @IBOutlet weak var conlbl: UILabel!
     @IBOutlet weak var hotellbl: UILabel!
     
+    @IBOutlet weak var lblone: UILabel!
+    
+    @IBOutlet weak var lbltwo: UILabel!
+    @IBOutlet weak var lblThree: UILabel!
+    @IBOutlet weak var lblFour: UILabel!
     
     var totalWetg : Int = 0
     
@@ -95,7 +100,14 @@ class budgetingViewController: BaseClassViewController,UITableViewDataSource,UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        foodlbl.isHidden = true
+        conlbl.isHidden = true
+        hotellbl.isHidden = true
+        lblone.isHidden = true
+        lbltwo.isHidden = true
+        lblThree.isHidden = true
+        lblFour.isHidden = true
+        totalexplbl.isHidden = true
         
         
         
@@ -246,6 +258,16 @@ class budgetingViewController: BaseClassViewController,UITableViewDataSource,UIT
                 foodlbl.text = "\((total * 0.3))"
         
                 totalexplbl.text = "\(total)"
+        
+        
+        foodlbl.isHidden = false
+        conlbl.isHidden = false
+        hotellbl.isHidden = false
+        lblone.isHidden = false
+        lbltwo.isHidden = false
+        lblThree.isHidden = false
+        lblFour.isHidden = false
+        totalexplbl.isHidden = false
     }
     
     
@@ -294,6 +316,7 @@ class budgetingViewController: BaseClassViewController,UITableViewDataSource,UIT
     
     
             cell.textLabel?.text =  "\(indexPath.row). " + String(describing: tableArray[indexPath.row].pointname)
+            cell.textLabel?.textColor = UIColor.white
     
     
            // cell.textLabel?.textAlignment = NSTextAlignment.center

@@ -13,15 +13,34 @@ class SignInViewController: BaseClassViewController {
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
-    
     @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var lblPakistan: UILabel!
+    @IBOutlet weak var lblOr: UILabel!
+    @IBOutlet weak var lblMessage: UILabel!
+    
+    @IBOutlet weak var btnAbout: BtnCustomClass!
+    
+    @IBOutlet weak var btnSignUp: BtnCustomClass!
     
     let pre = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         txtFirstName.text = "aaa@gmail.com"
-        txtPassword.text = "123456"
+//         txtFirstName.text = "aaa@gmail.com"
+//        txtPassword.text = "123456"
+        
+        
+        
+        txtFirstName.alpha = 0.0
+        txtPassword.alpha = 0.0
+        btnLogin.alpha = 0.0
+        lblPakistan.alpha = 0.0
+        lblOr.alpha = 0.0
+        lblMessage.alpha = 0.0
+        btnAbout.alpha = 0.0
+        btnSignUp.alpha = 0.0
+        
+
 
         
         btnLogin.addTarget(self, action:#selector(self.btnClick(sender:)) , for: .touchUpInside)
@@ -85,6 +104,21 @@ class SignInViewController: BaseClassViewController {
         self.present(alert, animated: true, completion: nil)
         
         
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        Animate.animateWithALpha(view: lblPakistan, Duration: 0.3)
+        Animate.animateWithALpha(view: txtFirstName, Duration: 0.5)
+        Animate.animateWithALpha(view: txtPassword, Duration: 0.7)
+        Animate.animateWithALpha(view: btnLogin, Duration: 0.9)
+        Animate.animateWithALpha(view: lblOr, Duration: 1)
+        Animate.animateWithALpha(view: btnSignUp, Duration: 1.2)
+        Animate.animateWithALpha(view: lblMessage, Duration: 1.3)
+        Animate.animateWithALpha(view: btnAbout, Duration: 1.5)
+        
+  
     }
     
     

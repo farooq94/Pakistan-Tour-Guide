@@ -32,6 +32,13 @@ class thirdViewController: BaseClassViewController,CustomHeaderdelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        btnViewDetail.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        convnc.alpha = 0.0
+        desc.alpha = 0.0
+        hotels.alpha = 0.0
+        imageview.alpha = 0.0
+        
         _topBar.lblTtitle.text = hotelName
         delegate = self
         
@@ -358,6 +365,17 @@ class thirdViewController: BaseClassViewController,CustomHeaderdelegate {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        Animate.animate(view: btnViewDetail, withLargeDuration: 0.5, withSmallDuration: 0.20)
+        
+        Animate.animateWithALpha(view: convnc, Duration: 0.5)
+        Animate.animateWithALpha(view: hotels, Duration: 0.5)
+        Animate.animateWithALpha(view: desc, Duration: 0.5)
+        Animate.animateWithALpha(view: imageview, Duration: 0.5)
+        
+    }
+    
     
     func btnClick(sender: AnyObject) {
         
@@ -370,6 +388,8 @@ class thirdViewController: BaseClassViewController,CustomHeaderdelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
 
     func headerBackBtnClick() {

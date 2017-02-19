@@ -110,6 +110,7 @@ class HomeViewController: BaseClassViewController, GMSMapViewDelegate,CustomHead
         infoWindow.lbltitle.text = marker.title
         infoWindow.lblSnippet.text = marker.snippet
         
+        
         return infoWindow
     }
     

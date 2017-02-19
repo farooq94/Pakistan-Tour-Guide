@@ -11,6 +11,10 @@ import UIKit
 class SplashViewController: BaseClassViewController {
 
     @IBOutlet weak var logoImageView : UIImageView!
+    @IBOutlet weak var lblPakistan : UILabel!
+    @IBOutlet weak var lblMessage : UILabel!
+   
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +41,12 @@ class SplashViewController: BaseClassViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         
-        UIView.animate(withDuration: 1.4,
+        UIView.animate(withDuration: 0.4,
                        animations: {
                         self.logoImageView.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
         },
                        completion: { _ in
-                        UIView.animate(withDuration: 0.25) {
+                        UIView.animate(withDuration: 0.8) {
                             self.logoImageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                         }
         })
